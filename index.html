@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTA 6 Cheat Codes Hub — PS5, PS5 Pro & Xbox Series X|S</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0d10;
+      --surface: #14161b;
+      --surface-2: #1c1f26;
+      --border: #262a34;
+      --border-hover: #383e4d;
+      --primary: #ff4655;
+      --secondary: #38bdf8;
+      --ok: #22c55e;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --dim: #6b7280;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .brand {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(12, 13, 16, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-dot {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .nav-right a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-right a:hover { color: #fff; }
+
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 24px 18px;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      margin-bottom: 22px;
+    }
+
+    .hero-content {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .live-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 1.95rem;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    .countdown-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      width: fit-content;
+    }
+
+    .countdown-bar strong {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--secondary);
+    }
+
+    .hero-media {
+      position: relative;
+      background: var(--surface);
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid var(--border);
+      overflow: hidden;
+      padding: 16px;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      max-height: 230px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    }
+
+    .ad-box {
+      background: var(--surface);
+      border: 1px dashed var(--border-hover);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--dim);
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .controls input {
+      flex: 1;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .controls input:focus { border-color: var(--primary); }
+
+    .plat-group {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    .plat-btn {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+
+    .plat-btn.active.ps5 { background: #2563eb; color: #fff; }
+    .plat-btn.active.xbox { background: #16a34a; color: #fff; }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      margin-bottom: 16px;
+      padding-bottom: 4px;
+    }
+
+    .tab {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .tab.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .cheat-table {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .cheat-row {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1.2fr 1.5fr auto;
+      gap: 16px;
+      align-items: center;
+      transition: background 0.15s;
+    }
+
+    .cheat-row:last-child { border-bottom: none; }
+    .cheat-row:hover { background: #181a20; }
+
+    .cheat-title {
+      font-weight: 700;
+      font-size: 0.98rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-confirmed {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(34, 197, 94, 0.16);
+      color: var(--ok);
+    }
+
+    .tag-unconfirmed {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(255, 70, 85, 0.14);
+      color: var(--primary);
+    }
+
+    .cheat-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .keys {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .k {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 30px;
+      height: 30px;
+      padding: 0 7px;
+      border-radius: 6px;
+      background: var(--surface-2);
+      border: 1px solid var(--border-hover);
+      border-bottom: 3px solid #090a0d;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .row-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-sm {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-sm:hover { border-color: var(--secondary); }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .editorial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .editorial-card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .editorial-card p, .editorial-card li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .editorial-card ul { padding-left: 18px; }
+
+    .support-toast {
+      position: fixed;
+      bottom: 24px;
+      right: -380px;
+      width: 330px;
+      background: linear-gradient(135deg, #171922 0%, #111318 100%);
+      border: 1px solid rgba(255, 70, 85, 0.35);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.75);
+      z-index: 90;
+      transition: right 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .support-toast.show { right: 24px; }
+
+    .toast-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .toast-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .toast-close {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .toast-close:hover { color: #fff; }
+
+    .toast-body {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toast-btn {
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.84rem;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .toast-btn:hover { opacity: 0.9; }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 10, 13, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 200;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .modal-box h3 {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+
+    .modal-box p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .choice-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 16px 12px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .choice-btn:hover { border-color: var(--primary); background: #222630; }
+
+    #verifyScreen {
+      display: none;
+      padding: 10px 0;
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--secondary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 14px;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    #timerCount {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.6rem;
+      color: var(--secondary);
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    #upiRevealScreen {
+      display: none;
+      text-align: left;
+    }
+
+    .top-thank-tab {
+      display: none;
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      color: var(--secondary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .top-thank-tab.visible {
+      display: block;
+    }
+
+    .only-upi-note {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .qr-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      width: 220px;
+      max-width: 100%;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-container img {
+      width: 100%;
+      height: auto;
+      max-height: 260px;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .upi-display {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .upi-display:hover {
+      border-color: var(--secondary);
+    }
+
+    #instaRevealScreen {
+      display: none;
+      text-align: center;
+    }
+
+    .insta-link-btn {
+      display: inline-block;
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .back-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    .back-btn:hover { color: #fff; }
+
+    .couch {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 10, 13, 0.97);
+      z-index: 100;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .couch.open { display: flex; }
+    .couch h2 { font-size: 1.8rem; margin-bottom: 6px; }
+    .couch p { color: var(--muted); margin-bottom: 24px; }
+    .couch-keys { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 720px; margin-bottom: 24px; }
+    .couch-keys .k { min-width: 52px; height: 52px; font-size: 1.25rem; padding: 0 14px; border-bottom-width: 5px; }
+    .couch-phone { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; color: var(--secondary); background: var(--surface); border: 1px solid var(--border); padding: 10px 20px; border-radius: 8px; margin-bottom: 24px; }
+    .couch-close { background: var(--primary); color: #fff; border: none; padding: 12px 26px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+
+    footer {
+      max-width: 1060px;
+      margin: 0 auto 30px;
+      padding: 20px 18px 0;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem;
+      color: var(--dim);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-media { border-left: none; border-top: 1px solid var(--border); min-height: 170px; }
+      .cheat-row { grid-template-columns: 1fr; gap: 10px; }
+      .editorial-grid { grid-template-columns: 1fr; }
+      .controls { flex-direction: column; }
+      .plat-btn { flex: 1; }
+      .support-toast { width: calc(100% - 32px); right: -100%; bottom: 16px; }
+      .support-toast.show { right: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <span>GTA 6 CHEAT CODES HUB</span>
+        <span class="brand-dot">2026</span>
+      </div>
+      <div class="nav-right">
+        <a href="#list">All Cheats</a>
+        <a href="#community">Info</a>
+        <a href="#guide">How to Enter</a>
+        <a href="#" onclick="openSupportModal(); return false;" style="color: var(--primary); font-weight: 700;">Support</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="live-pill">● PS5 • PS5 Pro • Xbox Series X|S</div>
+        <h1>GTA 6 Cheat Codes Hub</h1>
+        <p>Confirmed D-pad cheat sequences, unlock requirements, and console input guides for PlayStation 5 and Xbox Series X|S.</p>
+        <div class="countdown-bar">
+          <span>Release Status:</span>
+          <strong id="timer">LIVE NOW</strong>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="banner.jpg" alt="GTA 6 Artwork" onerror="this.style.display='none'" />
+      </div>
+    </section>
+
+    <div class="ad-box">Advertisement — Responsive Display Banner (Google AdSense)</div>
+
+    <div id="list" class="controls">
+      <input type="text" id="search" placeholder="Search cheat (e.g. $250,000, Max Ammo, Infinite Ammo, Weather, Boomazoom)..." />
+      <div class="plat-group">
+        <button class="plat-btn active ps5" id="btnPs5" onclick="setPlat('ps5')">PS5 / PS5 Pro</button>
+        <button class="plat-btn xbox" id="btnXbox" onclick="setPlat('xbox')">Xbox Series X|S</button>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-cat="All">All Codes (17)</button>
+      <button class="tab" data-cat="Combat">Combat & Ammo</button>
+      <button class="tab" data-cat="Player">Player & Health</button>
+      <button class="tab" data-cat="Vehicles">Vehicles</button>
+      <button class="tab" data-cat="World">World & Filters</button>
+    </div>
+
+    <div class="cheat-table" id="cheatList"></div>
+
+    <div class="ad-box">Advertisement — In-Feed Display Unit (Google AdSense)</div>
+
+    <section id="community" class="editorial-grid">
+      <div class="editorial-card">
+        <h2>How GTA 6 Cheats Work</h2>
+        <p>GTA 6 locks cheats behind story completion and individual unlock challenges rather than letting you enter them from the start of a new playthrough.</p>
+        <p><strong>Important Save Warning:</strong> Activating cheats disables saving, trophies, and achievements for that session—save your main file first.</p>
+      </div>
+
+      <div class="editorial-card">
+        <h2>How to Enter Codes on Console</h2>
+        <ul>
+          <li><strong>Unlock First:</strong> Finish the main story and complete each cheat's unlock requirement to open the Cheats tab under Progress.</li>
+          <li><strong>D-Pad Input:</strong> Open your in-game phone, hold <strong>L1 + R1</strong> on PS5 or <strong>LB + RB</strong> on Xbox, and enter the D-pad sequence.</li>
+          <li><strong>Same Sequences:</strong> Both PS5 and Xbox Series X|S use the same D-pad sequences.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="guide" class="editorial-grid">
+      <div class="editorial-card">
+        <h2>Unlock Requirements & Challenges</h2>
+        <p>Some cheats unlock after finishing the campaign, while others require shooting range medals, workouts, store robberies, or discovering specific vehicles.</p>
+      </div>
+
+      <div class="editorial-card">
+        <h2>Verification Status</h2>
+        <p>Sequences marked <strong>Confirmed</strong> match documented D-pad inputs; any pending or disputed entries are clearly labeled so you don't waste time.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- TIMED TOAST (7 SECONDS) -->
+  <div class="support-toast" id="supportToast">
+    <div class="toast-header">
+      <div class="toast-title">☕ Support the Creator</div>
+      <button class="toast-close" onclick="closeToast()">✕</button>
+    </div>
+    <div class="toast-body">
+      Check out support options or visit the creator's Instagram.
+    </div>
+    <button class="toast-btn" onclick="openSupportModal()">Open Support Options</button>
+  </div>
+
+  <!-- SUPPORT MODAL -->
+  <div class="modal-overlay" id="supportModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeSupportModal()">✕</button>
+
+      <!-- STEP 1: SUPPORT OPTIONS -->
+      <div id="choiceScreen">
+        <h3>Support Options</h3>
+        <p>Choose how you'd like to support or connect:</p>
+        <div class="choice-grid">
+          <button class="choice-btn" onclick="startVerification('payment', 10)">
+            <span style="font-size: 1.4rem;">💳</span>
+            Payment Option
+          </button>
+          <button class="choice-btn" onclick="startVerification('insta', 5)">
+            <span style="font-size: 1.4rem;">📸</span>
+            Creator Instagram
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 2: COUNTDOWN (NO UPI DETAILS SHOWN BEFORE COMPLETION) -->
+      <div id="verifyScreen">
+        <div class="spinner"></div>
+        <h3 id="verifyHeading" style="margin-bottom: 4px;">Support Options</h3>
+        <p id="verifySubLabel" style="font-size: 0.85rem; color: var(--text); font-weight: 600; margin-bottom: 4px;"></p>
+        <p style="font-size: 0.8rem; margin-bottom: 6px;">Please wait a moment...</p>
+        <div id="timerCount">10</div>
+        <p style="font-size: 0.72rem; color: var(--dim);">Checking availability...</p>
+      </div>
+
+      <!-- STEP 3A: PAYMENT REVEAL (ONLY UPI SHOWN AT THE LAST STEP) -->
+      <div id="upiRevealScreen">
+        <div class="top-thank-tab" id="topThankTab">Thank you for reaching this page.</div>
+        <h3 style="margin-bottom: 6px;">Support Options — Payment Option</h3>
+        <div class="only-upi-note">Currently only UPI is available.</div>
+        <div class="qr-container">
+          <img src="upi-qr.png" alt="UPI QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span style="display:none; font-size:0.75rem; color:#000; padding: 20px;">Add upi-qr.png to folder</span>
+        </div>
+        <div class="upi-display" onclick="copyText(this, 'vivaanvernekar99@okaxis')" title="Click to copy UPI ID">
+          📋 vivaanvernekar99@okaxis (Click to Copy)
+        </div>
+        <button class="back-btn" onclick="resetModalViews()">← Back to support options</button>
+      </div>
+
+      <!-- STEP 3B: CREATOR INSTAGRAM REVEAL -->
+      <div id="instaRevealScreen">
+        <h3 style="margin-bottom: 6px;">Creator Instagram 📸</h3>
+        <p style="font-size: 0.84rem; color: var(--muted); margin-bottom: 14px;">
+          Your follow really helps me out and keeps me motivated to build more projects like this!
+        </p>
+        <a href="https://www.instagram.com/vivaan.911?utm_source=qr" target="_blank" rel="noopener noreferrer" class="insta-link-btn">
+          Follow @vivaan.911 on Instagram
+        </a>
+        <button class="back-btn" onclick="resetModalViews()">← Back to support options</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COUCH MODE MODAL -->
+  <div class="couch" id="couchModal">
+    <h2 id="cTitle">Cheat</h2>
+    <p id="cPlat">PS5 / PS5 Pro Input</p>
+    <div class="couch-keys" id="cKeys"></div>
+    <div class="couch-phone" id="cPhone"></div>
+    <button class="couch-close" onclick="closeCouch()">Close Couch Mode</button>
+  </div>
+
+  <footer>
+    <div>© 2026 GTA 6 Cheat Codes Hub. Unofficial fan guide. Not affiliated with Rockstar Games.</div>
+    <div>PS5 & Xbox Series X|S use the same D-pad sequences.</div>
+  </footer>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("supportToast").classList.add("show");
+    }, 7000);
+
+    function closeToast() {
+      document.getElementById("supportToast").classList.remove("show");
+    }
+
+    let countdownInterval;
+    let thankTabTimeout;
+
+    function openSupportModal() {
+      closeToast();
+      resetModalViews();
+      document.getElementById("supportModal").classList.add("open");
+    }
+
+    function closeSupportModal() {
+      clearInterval(countdownInterval);
+      clearTimeout(thankTabTimeout);
+      document.getElementById("supportModal").classList.remove("open");
+    }
+
+    function resetModalViews() {
+      clearInterval(countdownInterval);
+      clearTimeout(thankTabTimeout);
+      document.getElementById("topThankTab").classList.remove("visible");
+      document.getElementById("choiceScreen").style.display = "block";
+      document.getElementById("verifyScreen").style.display = "none";
+      document.getElementById("upiRevealScreen").style.display = "none";
+      document.getElementById("instaRevealScreen").style.display = "none";
+    }
+
+    function startVerification(target, seconds) {
+      document.getElementById("choiceScreen").style.display = "none";
+      document.getElementById("verifyScreen").style.display = "block";
+      document.getElementById("verifyHeading").textContent = "Support Options";
+      document.getElementById("verifySubLabel").textContent =
+        target === "payment" ? "Payment Option" : "Creator Instagram";
+
+      let timeLeft = seconds;
+      document.getElementById("timerCount").textContent = timeLeft;
+
+      clearInterval(countdownInterval);
+      countdownInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timerCount").textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("verifyScreen").style.display = "none";
+          if (target === "payment") {
+            document.getElementById("topThankTab").classList.remove("visible");
+            document.getElementById("upiRevealScreen").style.display = "block";
+            clearTimeout(thankTabTimeout);
+            thankTabTimeout = setTimeout(() => {
+              document.getElementById("topThankTab").classList.add("visible");
+            }, 2000);
+          } else {
+            document.getElementById("instaRevealScreen").style.display = "block";
+          }
+        }
+      }, 1000);
+    }
+
+    function copyText(el, val) {
+      navigator.clipboard.writeText(val);
+      const old = el.textContent;
+      el.textContent = "✅ Copied UPI ID Successfully!";
+      setTimeout(() => { el.textContent = old; }, 1800);
+    }
+
+    const release = new Date("November 19, 2026 00:00:00").getTime();
+    function tick() {
+      const diff = release - Date.now();
+      if (diff <= 0) {
+        document.getElementById("timer").textContent = "LIVE NOW";
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff / 3600000) % 24);
+      const m = Math.floor((diff / 60000) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      document.getElementById("timer").textContent = `${d}d ${h}h ${m}m ${s}s`;
+    }
+    setInterval(tick, 1000);
+    tick();
+
+    const cheats = [
+      {
+        title: "$250,000 Cash",
+        cat: "Player",
+        confirmed: true,
+        desc: "Unlock: Finish the main story (or earn $250,000 from fenced goods).",
+        seq: ["UP","RIGHT","DOWN","LEFT","UP","LEFT","DOWN","RIGHT"]
+      },
+      {
+        title: "Unlimited Focus",
+        cat: "Player",
+        confirmed: true,
+        desc: "Unlock: Finish the main story.",
+        seq: ["DOWN","UP","UP","DOWN","UP","DOWN","UP","DOWN","UP","RIGHT"]
+      },
+      {
+        title: "Body Armor",
+        cat: "Player",
+        confirmed: true,
+        desc: "Unlock: Complete 100 workouts.",
+        seq: ["DOWN","UP","LEFT","UP","UP","UP","UP","UP","DOWN","DOWN"]
+      },
+      {
+        title: "Raise Heat Level",
+        cat: "Player",
+        confirmed: true,
+        desc: "Unlock: Lose a 3-star wanted level 25 times.",
+        seq: ["LEFT","DOWN","RIGHT","DOWN","UP","DOWN","UP"]
+      },
+      {
+        title: "Max Ammo",
+        cat: "Combat",
+        confirmed: true,
+        desc: "Unlock: Win bronze medals or better at shooting ranges.",
+        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","UP","DOWN","LEFT"]
+      },
+      {
+        title: "Infinite Ammo",
+        cat: "Combat",
+        confirmed: true,
+        desc: "Unlock: Win 25 silver medals or better at shooting ranges.",
+        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","DOWN"]
+      },
+      {
+        title: "No Reload",
+        cat: "Combat",
+        confirmed: true,
+        desc: "Unlock: Win 25 gold medals at shooting ranges.",
+        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","UP"]
+      },
+      {
+        title: "Attack Force",
+        cat: "Combat",
+        confirmed: true,
+        desc: "Unlock: Finish the main story (or 100 melee takedowns).",
+        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","DOWN"]
+      },
+      {
+        title: "Exploding Balls",
+        cat: "Combat",
+        confirmed: true,
+        desc: "Unlock: Hit 20 enemies with explosive damage.",
+        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","RIGHT"]
+      },
+      {
+        title: "Vehicle Force",
+        cat: "Combat",
+        confirmed: true,
+        desc: "Unlock: Kill 25 enemies with a vehicle.",
+        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","LEFT","UP","DOWN"]
+      },
+      {
+        title: "Maibatsu Boomazoom",
+        cat: "Vehicles",
+        confirmed: true,
+        desc: "Unlock: Complete 5 shopping challenges.",
+        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","LEFT","UP","LEFT"]
+      },
+      {
+        title: "MTL Pumper",
+        cat: "Vehicles",
+        confirmed: true,
+        desc: "Unlock: Discover the MTL Pumper in the Progress menu.",
+        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","UP"]
+      },
+      {
+        title: "HVY Bulldozer",
+        cat: "Vehicles",
+        confirmed: true,
+        desc: "Unlock: Discover the HVY Bulldozer in the Progress menu.",
+        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","DOWN"]
+      },
+      {
+        title: "Cycle Weather",
+        cat: "World",
+        confirmed: true,
+        desc: "Unlock: Finish the main story / reveal the map.",
+        seq: ["DOWN","RIGHT","UP","DOWN","RIGHT","UP","RIGHT"]
+      },
+      {
+        title: "Cataclysm Filter",
+        cat: "World",
+        confirmed: true,
+        desc: "Unlock: Discover Martha's Vamos in the Progress menu.",
+        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","RIGHT","RIGHT"]
+      },
+      {
+        title: "Dollhouse Filter",
+        cat: "World",
+        confirmed: true,
+        desc: "Unlock: Spend 8 hours with your partner.",
+        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","DOWN","RIGHT"]
+      },
+      {
+        title: "Faded Glory Filter",
+        cat: "World",
+        confirmed: true,
+        desc: "Unlock: Rob 50 stores with your partner.",
+        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","LEFT","RIGHT"]
+      }
+    ];
+
+    function keyIcon(t) {
+      const icons = {
+        UP: `<span class="k">↑</span>`,
+        DOWN: `<span class="k">↓</span>`,
+        LEFT: `<span class="k">←</span>`,
+        RIGHT: `<span class="k">→</span>`
+      };
+      return icons[t] || `<span class="k">${t}</span>`;
+    }
+
+    function formatSeqText(seq) {
+      return seq.map(s => s[0] + s.slice(1).toLowerCase()).join(" → ");
+    }
+
+    let plat = "ps5";
+    let cat = "All";
+    const listEl = document.getElementById("cheatList");
+    const searchEl = document.getElementById("search");
+
+    function setPlat(p) {
+      plat = p;
+      document.getElementById("btnPs5").classList.toggle("active", p === "ps5");
+      document.getElementById("btnXbox").classList.toggle("active", p === "xbox");
+      render();
+    }
+
+    function copySeq(btn, text) {
+      navigator.clipboard.writeText(text);
+      const old = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(() => { btn.textContent = old; }, 1000);
+    }
+
+    function openCouch(i) {
+      const c = cheats[i];
+      const prefix = plat === "ps5" ? "Hold L1 + R1, then press: " : "Hold LB + RB, then press: ";
+      document.getElementById("cTitle").textContent = c.title;
+      document.getElementById("cPlat").textContent = plat === "ps5" ? "PS5 / PS5 Pro Input" : "Xbox Series X|S Input";
+      document.getElementById("cKeys").innerHTML = c.seq.map(keyIcon).join("");
+      document.getElementById("cPhone").textContent = prefix + formatSeqText(c.seq);
+      document.getElementById("couchModal").classList.add("open");
+    }
+
+    function closeCouch() {
+      document.getElementById("couchModal").classList.remove("open");
+    }
+
+    function render() {
+      const q = searchEl.value.trim().toLowerCase();
+      const filtered = cheats
+        .map((c, idx) => ({ ...c, idx }))
+        .filter(c => (cat === "All" || c.cat === cat) && (c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q)));
+
+      if (filtered.length === 0) {
+        listEl.innerHTML = `<div style="padding:20px; text-align:center; color:var(--muted);">No matching cheat codes found.</div>`;
+        return;
+      }
+
+      const holdHint = plat === "ps5" ? "L1+R1" : "LB+RB";
+
+      listEl.innerHTML = filtered.map(c => {
+        const badge = c.confirmed
+          ? `<span class="tag-confirmed">Confirmed</span>`
+          : `<span class="tag-unconfirmed">Unconfirmed</span>`;
+        const seqText = `${holdHint}: ${formatSeqText(c.seq)}`;
+        return `
+          <div class="cheat-row">
+            <div>
+              <div class="cheat-title">${c.title} ${badge}</div>
+              <div class="cheat-sub">${c.desc}</div>
+            </div>
+            <div class="keys">${c.seq.map(keyIcon).join("")}</div>
+            <div class="row-actions">
+              <button class="btn-sm" onclick="copySeq(this, '${seqText}')">Copy Sequence</button>
+              <button class="btn-sm" onclick="openCouch(${c.idx})" title="Full-screen view">📺</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    document.querySelectorAll(".tab").forEach(b => {
+      b.onclick = () => {
+        document.querySelector(".tab.active").classList.remove("active");
+        b.classList.add("active");
+        cat = b.dataset.cat;
+        render();
+      };
+    });
+
+    searchEl.oninput = render;
+    render();
+  </script>
+</body>
+</html>
