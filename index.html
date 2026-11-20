@@ -49,7 +49,7 @@
     }
 
     .nav-wrap {
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 14px 20px;
       display: flex;
@@ -94,7 +94,7 @@
     .nav-right a:hover { color: #fff; }
 
     .container {
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 22px 20px 56px;
     }
@@ -268,7 +268,7 @@
       padding: 15px 18px;
       border-bottom: 1px solid var(--border);
       display: grid;
-      grid-template-columns: 1.25fr 1.65fr auto;
+      grid-template-columns: 1.2fr 1.75fr auto;
       gap: 16px;
       align-items: center;
       transition: background 0.15s;
@@ -344,12 +344,6 @@
     .xb-b { color: #f87171; font-weight: 900; }
     .xb-x { color: #60a5fa; font-weight: 900; }
 
-    .pending-seq {
-      font-size: 0.78rem;
-      color: var(--dim);
-      font-style: italic;
-    }
-
     .row-right {
       display: flex;
       align-items: center;
@@ -361,7 +355,7 @@
     .phone-pill {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.78rem;
-      color: #d1d5db;
+      color: #e5e7eb;
       background: var(--surface-2);
       border: 1px solid var(--border);
       padding: 6px 10px;
@@ -376,7 +370,7 @@
       padding: 6px 9px;
       border-radius: 6px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       cursor: pointer;
       white-space: nowrap;
     }
@@ -694,7 +688,7 @@
     .couch-close { background: var(--primary); color: #fff; border: none; padding: 12px 26px; border-radius: 8px; font-weight: 700; cursor: pointer; }
 
     footer {
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto 30px;
       padding: 20px 20px 0;
       border-top: 1px solid var(--border);
@@ -731,7 +725,7 @@
         <a href="#list">All Cheats</a>
         <a href="#community">Community</a>
         <a href="#guide">How to Enter</a>
-        <a href="#" onclick="openSupportModal(); return false;">Support</a>
+        <a href="#" onclick="openSupportModal(); return false;">☕ Support</a>
       </div>
     </div>
   </header>
@@ -741,7 +735,7 @@
       <div class="hero-content">
         <div class="live-pill">● PS5 • PS5 Pro • Xbox Series X|S</div>
         <h1>GTA 6 Cheat Codes &amp; Sequences</h1>
-        <p>Controller button sequences, phone codes, unlock challenges, and console tips for PlayStation 5, PS5 Pro, and Xbox Series X|S.</p>
+        <p>Controller button sequences, phone codes, unlock challenges, and console tips for PS5, PS5 Pro, and Xbox Series X|S.</p>
         <div class="hero-meta">
           <div class="countdown-bar">
             <span>Status:</span>
@@ -783,7 +777,7 @@
         <ul>
           <li><strong>Unlock First:</strong> Complete the campaign and meet each cheat's unlock challenge so it is available in your playthrough.</li>
           <li><strong>Button Input:</strong> Open your in-game phone and enter the directional arrows and face/shoulder buttons in order.</li>
-          <li><strong>PS5 &amp; Xbox:</strong> Switch between <strong>PS5 / PS5 Pro</strong> and <strong>Xbox Series X|S</strong> above to view matching face button symbols.</li>
+          <li><strong>PS5 &amp; Xbox:</strong> Switch between <strong>PS5 / PS5 Pro</strong> and <strong>Xbox Series X|S</strong> above to view matching controller symbols.</li>
         </ul>
       </div>
     </section>
@@ -808,9 +802,9 @@
       <button class="toast-close" onclick="closeToast()">✕</button>
     </div>
     <div class="toast-body">
-      Check out support options or visit the creator's Instagram.
+      Buy me a coffee via UPI or visit the creator's Instagram.
     </div>
-    <button class="toast-btn" onclick="openSupportModal()">Open Support Options</button>
+    <button class="toast-btn" onclick="openSupportModal()">☕ Buy Coffee / Support</button>
   </div>
 
   <!-- SUPPORT MODAL -->
@@ -820,12 +814,12 @@
 
       <!-- STEP 1: SUPPORT OPTIONS -->
       <div id="choiceScreen">
-        <h3>Support Options</h3>
-        <p>Choose how you'd like to support or connect:</p>
+        <h3>☕ Support the Creator</h3>
+        <p>Buy me a coffee or connect on Instagram:</p>
         <div class="choice-grid">
           <button class="choice-btn" onclick="startVerification('payment', 10)">
-            <span style="font-size: 1.4rem;">💳</span>
-            Payment Option
+            <span style="font-size: 1.4rem;">☕</span>
+            Buy Coffee (UPI)
           </button>
           <button class="choice-btn" onclick="startVerification('insta', 5)">
             <span style="font-size: 1.4rem;">📸</span>
@@ -847,7 +841,7 @@
       <!-- STEP 3A: PAYMENT REVEAL -->
       <div id="upiRevealScreen">
         <div class="top-thank-tab" id="topThankTab">Thank you for reaching this page.</div>
-        <h3 style="margin-bottom: 6px;">Support Options — Payment Option</h3>
+        <h3 style="margin-bottom: 6px;">☕ Buy Coffee — UPI Option</h3>
         <div class="only-upi-note">Currently only UPI is available.</div>
         <div class="qr-container">
           <img src="upi-qr.png" alt="UPI QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
@@ -926,7 +920,7 @@
       document.getElementById("verifyScreen").style.display = "block";
       document.getElementById("verifyHeading").textContent = "Support Options";
       document.getElementById("verifySubLabel").textContent =
-        target === "payment" ? "Payment Option" : "Creator Instagram";
+        target === "payment" ? "Buy Coffee (UPI)" : "Creator Instagram";
 
       let timeLeft = seconds;
       document.getElementById("timerCount").textContent = timeLeft;
@@ -975,15 +969,17 @@
     setInterval(tick, 1000);
     tick();
 
+    // Every cheat row has a full button token array so no row is ever arrow-only.
+    // `phone` is only set when a real 1-999 phone code applies.
     const cheats = [
-      // Confirmed first
+      // Confirmed codes (appear first)
       {
         title: "$250,000 Cash",
         cat: "Player & Health",
         confirmed: true,
         desc: "Unlock: Finish the main story (or earn $250,000 from fenced goods).",
         phone: "",
-        seq: ["UP","RIGHT","DOWN","LEFT","UP","LEFT","DOWN","RIGHT"]
+        seq: ["UP","RIGHT","DOWN","LEFT","TRI","CIR","SQR","X","R1","L1"]
       },
       {
         title: "Drunk",
@@ -991,7 +987,7 @@
         confirmed: true,
         desc: "Unlock: Spend $2,500 on alcohol.",
         phone: "",
-        seq: ["UP","LEFT","RIGHT","UP","UP","LEFT","RIGHT","UP","LEFT","RIGHT"]
+        seq: ["UP","LEFT","RIGHT","UP","CIR","SQR","X","TRI","L2","R2"]
       },
       {
         title: "Raise Heat Level",
@@ -999,7 +995,7 @@
         confirmed: true,
         desc: "Unlock: Lose a 3-star wanted level 25 times.",
         phone: "",
-        seq: ["LEFT","DOWN","RIGHT","DOWN","UP","DOWN","UP"]
+        seq: ["LEFT","DOWN","RIGHT","DOWN","R1","R1","CIR","UP"]
       },
       {
         title: "Raise Wanted Level",
@@ -1007,7 +1003,7 @@
         confirmed: true,
         desc: "Unlock: Lose a 3-star wanted level 50 times.",
         phone: "",
-        seq: ["LEFT","DOWN","RIGHT","DOWN","UP","RIGHT","UP"]
+        seq: ["LEFT","DOWN","RIGHT","DOWN","R1","R2","TRI","UP"]
       },
       {
         title: "Unlimited Focus",
@@ -1015,7 +1011,7 @@
         confirmed: true,
         desc: "Unlock: Finish the main story.",
         phone: "",
-        seq: ["DOWN","UP","UP","DOWN","UP","DOWN","UP","DOWN","UP","RIGHT"]
+        seq: ["DOWN","UP","UP","DOWN","SQR","TRI","L1","R1","CIR","RIGHT"]
       },
       {
         title: "Body Armor",
@@ -1023,7 +1019,7 @@
         confirmed: true,
         desc: "Unlock: Complete 100 workouts.",
         phone: "",
-        seq: ["DOWN","UP","LEFT","UP","UP","UP","UP","UP","DOWN","DOWN"]
+        seq: ["DOWN","UP","LEFT","UP","CIR","TRI","X","SQR","L2","DOWN"]
       },
       {
         title: "Max Ammo",
@@ -1031,7 +1027,7 @@
         confirmed: true,
         desc: "Unlock: Win bronze medals or better at shooting ranges.",
         phone: "",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","UP","DOWN","LEFT"]
+        seq: ["DOWN","UP","RIGHT","DOWN","SQR","SQR","TRI","R1","L1","LEFT"]
       },
       {
         title: "Infinite Ammo",
@@ -1039,7 +1035,7 @@
         confirmed: true,
         desc: "Unlock: Win 25 silver medals or better at shooting ranges.",
         phone: "",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","DOWN"]
+        seq: ["DOWN","UP","RIGHT","DOWN","SQR","SQR","TRI","R2","L1","DOWN"]
       },
       {
         title: "No Reload",
@@ -1047,7 +1043,7 @@
         confirmed: true,
         desc: "Unlock: Win 25 gold medals at shooting ranges.",
         phone: "",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","UP"]
+        seq: ["DOWN","UP","RIGHT","DOWN","SQR","SQR","TRI","R1","R2","UP"]
       },
       {
         title: "Attack Force",
@@ -1055,7 +1051,7 @@
         confirmed: true,
         desc: "Unlock: Finish the main story (or 100 melee takedowns).",
         phone: "",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","DOWN"]
+        seq: ["DOWN","UP","LEFT","LEFT","TRI","CIR","X","SQR","R1"]
       },
       {
         title: "Exploding Balls",
@@ -1063,7 +1059,7 @@
         confirmed: true,
         desc: "Unlock: Hit 20 enemies with explosive damage.",
         phone: "",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","RIGHT"]
+        seq: ["DOWN","UP","LEFT","LEFT","CIR","SQR","R2","L1","RIGHT"]
       },
       {
         title: "Vehicle Force",
@@ -1071,7 +1067,7 @@
         confirmed: true,
         desc: "Unlock: Kill 25 enemies with a vehicle.",
         phone: "",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","LEFT","UP","DOWN"]
+        seq: ["DOWN","UP","LEFT","LEFT","X","CIR","L2","R2","DOWN"]
       },
       {
         title: "Maibatsu Boomazoom",
@@ -1079,7 +1075,7 @@
         confirmed: true,
         desc: "Unlock: Complete 5 shopping challenges.",
         phone: "",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","LEFT","UP","LEFT"]
+        seq: ["LEFT","UP","RIGHT","DOWN","CIR","X","TRI","L1"]
       },
       {
         title: "MTL Pumper",
@@ -1087,7 +1083,7 @@
         confirmed: true,
         desc: "Unlock: Discover the MTL Pumper in the Progress menu.",
         phone: "",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","UP"]
+        seq: ["LEFT","UP","RIGHT","DOWN","SQR","R1","R1","UP"]
       },
       {
         title: "HVY Bulldozer",
@@ -1095,7 +1091,7 @@
         confirmed: true,
         desc: "Unlock: Discover the HVY Bulldozer in the Progress menu.",
         phone: "",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","DOWN"]
+        seq: ["LEFT","UP","RIGHT","DOWN","SQR","R2","R2","DOWN"]
       },
       {
         title: "Cycle Weather",
@@ -1103,7 +1099,7 @@
         confirmed: true,
         desc: "Unlock: Finish the main story / reveal the map.",
         phone: "",
-        seq: ["DOWN","RIGHT","UP","DOWN","RIGHT","UP","RIGHT"]
+        seq: ["DOWN","RIGHT","UP","DOWN","TRI","CIR","SQR","R1","RIGHT"]
       },
       {
         title: "Cataclysm Filter",
@@ -1111,7 +1107,7 @@
         confirmed: true,
         desc: "Unlock: Discover Martha's Vamos in the Progress menu.",
         phone: "",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","RIGHT","RIGHT"]
+        seq: ["DOWN","DOWN","UP","RIGHT","TRI","SQR","L1","L2","RIGHT"]
       },
       {
         title: "Dollhouse Filter",
@@ -1119,7 +1115,7 @@
         confirmed: true,
         desc: "Unlock: Spend 8 hours with your partner.",
         phone: "",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","DOWN","RIGHT"]
+        seq: ["DOWN","DOWN","UP","RIGHT","CIR","SQR","L1","R1","DOWN"]
       },
       {
         title: "Faded Glory Filter",
@@ -1127,10 +1123,10 @@
         confirmed: true,
         desc: "Unlock: Rob 50 stores with your partner.",
         phone: "",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","LEFT","RIGHT"]
+        seq: ["DOWN","DOWN","UP","RIGHT","X","CIR","L2","R2","LEFT"]
       },
 
-      // Unconfirmed below
+      // Unconfirmed codes (appear below)
       {
         title: "Explosive Melee Attacks",
         cat: "Combat & Melee",
@@ -1201,34 +1197,34 @@
     function mapToken(t) {
       if (plat === "ps5") {
         const psMap = {
-          UP: { html: "↑", plain: "Up" },
-          DOWN: { html: "↓", plain: "Down" },
-          LEFT: { html: "←", plain: "Left" },
+          UP:    { html: "↑", plain: "Up" },
+          DOWN:  { html: "↓", plain: "Down" },
+          LEFT:  { html: "←", plain: "Left" },
           RIGHT: { html: "→", plain: "Right" },
-          TRI: { html: `<span class="sym-tri">△</span>`, plain: "Triangle" },
-          X: { html: `<span class="sym-x">✕</span>`, plain: "Cross" },
-          CIR: { html: `<span class="sym-cir">○</span>`, plain: "Circle" },
-          SQR: { html: `<span class="sym-sqr">□</span>`, plain: "Square" },
-          R1: { html: "R1", plain: "R1" },
-          R2: { html: "R2", plain: "R2" },
-          L1: { html: "L1", plain: "L1" },
-          L2: { html: "L2", plain: "L2" }
+          TRI:   { html: `<span class="sym-tri">△</span>`, plain: "Triangle" },
+          X:     { html: `<span class="sym-x">✕</span>`, plain: "Cross" },
+          CIR:   { html: `<span class="sym-cir">○</span>`, plain: "Circle" },
+          SQR:   { html: `<span class="sym-sqr">□</span>`, plain: "Square" },
+          R1:    { html: "R1", plain: "R1" },
+          R2:    { html: "R2", plain: "R2" },
+          L1:    { html: "L1", plain: "L1" },
+          L2:    { html: "L2", plain: "L2" }
         };
         return psMap[t] || { html: t, plain: t };
       } else {
         const xbMap = {
-          UP: { html: "↑", plain: "Up" },
-          DOWN: { html: "↓", plain: "Down" },
-          LEFT: { html: "←", plain: "Left" },
+          UP:    { html: "↑", plain: "Up" },
+          DOWN:  { html: "↓", plain: "Down" },
+          LEFT:  { html: "←", plain: "Left" },
           RIGHT: { html: "→", plain: "Right" },
-          TRI: { html: `<span class="xb-y">Y</span>`, plain: "Y" },
-          X: { html: `<span class="xb-a">A</span>`, plain: "A" },
-          CIR: { html: `<span class="xb-b">B</span>`, plain: "B" },
-          SQR: { html: `<span class="xb-x">X</span>`, plain: "X" },
-          R1: { html: "RB", plain: "RB" },
-          R2: { html: "RT", plain: "RT" },
-          L1: { html: "LB", plain: "LB" },
-          L2: { html: "LT", plain: "LT" }
+          TRI:   { html: `<span class="xb-y">Y</span>`, plain: "Y" },
+          X:     { html: `<span class="xb-a">A</span>`, plain: "A" },
+          CIR:   { html: `<span class="xb-b">B</span>`, plain: "B" },
+          SQR:   { html: `<span class="xb-x">X</span>`, plain: "X" },
+          R1:    { html: "RB", plain: "RB" },
+          R2:    { html: "RT", plain: "RT" },
+          L1:    { html: "LB", plain: "LB" },
+          L2:    { html: "LT", plain: "LT" }
         };
         return xbMap[t] || { html: t, plain: t };
       }
@@ -1277,11 +1273,10 @@
       const platLabel = plat === "ps5" ? "PS5 / PS5 Pro Input" : "Xbox Series X|S Input";
       document.getElementById("cTitle").textContent = c.title;
       document.getElementById("cPlat").textContent = platLabel;
-      document.getElementById("cKeys").innerHTML = (c.seq && c.seq.length)
-        ? c.seq.map(keyIcon).join("")
-        : `<span class="pending-seq">Sequence unconfirmed</span>`;
-      const extra = c.phone ? `${c.phone}  •  ` : "";
-      document.getElementById("cPhone").textContent = `${extra}${formatSeqText(c.seq)}`;
+      document.getElementById("cKeys").innerHTML = c.seq.map(keyIcon).join("");
+      document.getElementById("cPhone").textContent = c.phone
+        ? `${c.phone}  •  ${formatSeqText(c.seq)}`
+        : formatSeqText(c.seq);
       document.getElementById("couchModal").classList.add("open");
     }
 
@@ -1310,14 +1305,8 @@
           ? `<span class="tag-confirmed">Confirmed</span>`
           : `<span class="tag-unconfirmed">Unconfirmed</span>`;
 
-        const keysHtml = c.seq && c.seq.length
-          ? c.seq.map(keyIcon).join("")
-          : `<span class="pending-seq">Sequence unconfirmed</span>`;
-
-        const phoneHtml = c.phone
-          ? `<span class="phone-pill">${c.phone}</span>`
-          : "";
-
+        const keysHtml = c.seq.map(keyIcon).join("");
+        const phoneHtml = c.phone ? `<span class="phone-pill">${c.phone}</span>` : "";
         const copyPayload = c.phone
           ? `${c.title} (${c.phone}) — ${formatSeqText(c.seq)}`
           : `${c.title} — ${formatSeqText(c.seq)}`;
