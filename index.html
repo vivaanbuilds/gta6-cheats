@@ -2,1170 +2,862 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GTA 6 Cheat Codes Hub — PS5, PS5 Pro & Xbox Series X|S</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0d10" />
+  <meta name="description" content="GTA 6 Cheat Codes Hub for PS5 and Xbox Series X|S. Confirmed D-pad sequences, unlock requirements, and entry guide." />
+  <title>GTA 6 Cheat Codes Hub (2026) — PS5 &amp; Xbox Series X|S</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0d10'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%23ff4655' stroke-width='4'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='28'%3EVI%3C/text%3E%3C/svg%3E" />
   <style>
     :root {
       --bg: #0c0d10;
-      --surface: #14161b;
-      --surface-2: #1c1f26;
-      --border: #262a34;
-      --border-hover: #383e4d;
-      --primary: #ff4655;
-      --secondary: #38bdf8;
-      --ok: #22c55e;
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --dim: #6b7280;
+      --surface: #14161c;
+      --surface-2: #1b1e27;
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #f3f5f8;
+      --muted: #9aa2b1;
+      --accent: #ff4655;
+      --accent-2: #ff7b54;
+      --ps: #2e7cf6;
+      --xb: #27b35b;
+      --ok: #2ecc71;
+      --warn: #f1c40f;
+      --radius: 14px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+    }
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: var(--bg);
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
     }
 
-    h1, h2, h3, .brand {
-      font-family: 'Space Grotesk', sans-serif;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    header {
+    button, input {
+      font-family: inherit;
+    }
+
+    .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(12, 13, 16, 0.9);
+      z-index: 30;
+      background: rgba(12, 13, 16, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
-    .nav-wrap {
-      max-width: 1060px;
+    .topbar-inner {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 14px 18px;
+      padding: 10px 14px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .brand {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
       display: flex;
       align-items: center;
       gap: 8px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      font-size: 0.92rem;
+      min-width: 0;
     }
 
-    .brand-dot {
-      background: var(--primary);
-      color: #fff;
-      font-size: 0.72rem;
+    .brand-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
       padding: 2px 7px;
-      border-radius: 4px;
-      letter-spacing: 0.5px;
+      border-radius: 999px;
+      background: rgba(255, 70, 85, 0.16);
+      color: #ff7b86;
+      border: 1px solid rgba(255, 70, 85, 0.35);
+      flex-shrink: 0;
     }
 
-    .nav-right {
+    .nav {
       display: flex;
       align-items: center;
-      gap: 18px;
-      font-size: 0.85rem;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-size: 0.82rem;
       font-weight: 600;
-    }
-
-    .nav-right a {
       color: var(--muted);
-      text-decoration: none;
-      transition: color 0.15s;
+      padding: 6px 10px;
+      border-radius: 9px;
+      transition: background 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
     }
 
-    .nav-right a:hover { color: #fff; }
+    .nav-link:hover {
+      color: var(--text);
+      background: var(--surface-2);
+    }
 
-    .container {
-      max-width: 1060px;
+    .nav-support {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border: 0;
+      padding: 6px 12px;
+      border-radius: 9px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .wrap {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 24px 18px;
+      padding: 18px 14px 56px;
     }
 
     .hero {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
+      position: relative;
+      border-radius: var(--radius);
       overflow: hidden;
-      display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      margin-bottom: 22px;
-    }
-
-    .hero-content {
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .live-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.76rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .hero h1 {
-      font-size: 1.95rem;
-      line-height: 1.15;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 0.92rem;
-      margin-bottom: 18px;
-    }
-
-    .countdown-bar {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--bg);
       border: 1px solid var(--border);
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      width: fit-content;
-    }
-
-    .countdown-bar strong {
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--secondary);
+      background: var(--surface);
+      margin-bottom: 18px;
     }
 
     .hero-media {
       position: relative;
-      background: var(--surface);
-      min-height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-left: 1px solid var(--border);
-      overflow: hidden;
-      padding: 16px;
+      width: 100%;
+      height: 220px;
+      background: #12141a;
     }
 
     .hero-media img {
       width: 100%;
       height: 100%;
-      max-height: 230px;
       object-fit: cover;
-      border-radius: 10px;
       display: block;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+      opacity: 0.42;
     }
 
-    .ad-box {
-      background: var(--surface);
-      border: 1px dashed var(--border-hover);
-      border-radius: 8px;
-      padding: 12px;
-      text-align: center;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--dim);
-      margin-bottom: 20px;
+    .hero-overlay {
+      position: relative;
+      margin-top: -175px;
+      padding: 16px 18px 20px;
+      background: linear-gradient(180deg, rgba(12, 13, 16, 0.25) 0%, rgba(12, 13, 16, 0.92) 45%, rgba(12, 13, 16, 0.98) 100%);
+    }
+
+    .hero h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.3rem, 4.5vw, 2.05rem);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 720px;
+    }
+
+    .status-row {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .pill {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: var(--text);
+      font-weight: 600;
     }
 
     .controls {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .search-box {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 11px;
+      padding: 10px 13px;
+      font-size: 0.92rem;
+      outline: none;
+    }
+
+    .search-box:focus {
+      border-color: rgba(255, 70, 85, 0.6);
+    }
+
+    .platform-switch {
+      display: inline-flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .plat-btn {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 7px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .plat-btn.active.ps {
+      background: rgba(46, 124, 246, 0.2);
+      color: #7ab0ff;
+    }
+
+    .plat-btn.active.xb {
+      background: rgba(39, 179, 91, 0.2);
+      color: #6ce097;
+    }
+
+    .subbar {
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       gap: 10px;
       margin-bottom: 14px;
     }
 
-    .controls input {
-      flex: 1;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: #fff;
-      padding: 12px 16px;
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      outline: none;
-    }
-
-    .controls input:focus { border-color: var(--primary); }
-
-    .plat-group {
-      display: flex;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 4px;
-    }
-
-    .plat-btn {
-      border: none;
-      background: transparent;
-      color: var(--muted);
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-family: inherit;
-      font-weight: 700;
-      font-size: 0.82rem;
-      cursor: pointer;
-    }
-
-    .plat-btn.active.ps5 { background: #2563eb; color: #fff; }
-    .plat-btn.active.xbox { background: #16a34a; color: #fff; }
-
     .tabs {
       display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      margin-bottom: 16px;
-      padding-bottom: 4px;
-    }
-
-    .tab {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-family: inherit;
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .tab.active {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: #fff;
-    }
-
-    .cheat-table {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 28px;
-    }
-
-    .cheat-row {
-      padding: 16px 18px;
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1.2fr 1.5fr auto;
-      gap: 16px;
-      align-items: center;
-      transition: background 0.15s;
-    }
-
-    .cheat-row:last-child { border-bottom: none; }
-    .cheat-row:hover { background: #181a20; }
-
-    .cheat-title {
-      font-weight: 700;
-      font-size: 0.98rem;
-      display: flex;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag-confirmed {
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 2px 7px;
-      border-radius: 4px;
-      background: rgba(34, 197, 94, 0.16);
-      color: var(--ok);
-    }
-
-    .tag-unconfirmed {
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 2px 7px;
-      border-radius: 4px;
-      background: rgba(255, 70, 85, 0.14);
-      color: var(--primary);
-    }
-
-    .cheat-sub {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .keys {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-
-    .k {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 30px;
-      height: 30px;
-      padding: 0 7px;
-      border-radius: 6px;
-      background: var(--surface-2);
-      border: 1px solid var(--border-hover);
-      border-bottom: 3px solid #090a0d;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 800;
-      font-size: 0.78rem;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.4);
-    }
-
-    .row-actions {
-      display: flex;
       gap: 6px;
     }
 
-    .btn-sm {
-      background: var(--surface-2);
+    .tab-btn {
+      background: var(--surface);
       border: 1px solid var(--border);
-      color: var(--text);
-      padding: 6px 10px;
-      border-radius: 6px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      color: var(--muted);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
       cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .scope-toggle {
+      display: inline-flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .scope-btn {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .scope-btn.active {
+      background: rgba(255, 70, 85, 0.2);
+      color: #ff8a93;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .cheat-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .badge-ok {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(46, 204, 113, 0.15);
+      color: #6ce097;
+      border: 1px solid rgba(46, 204, 113, 0.35);
       white-space: nowrap;
     }
 
-    .btn-sm:hover { border-color: var(--secondary); }
-
-    .editorial-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 28px;
+    .badge-pending {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(241, 196, 15, 0.14);
+      color: #f7d558;
+      border: 1px solid rgba(241, 196, 15, 0.32);
+      white-space: nowrap;
     }
 
-    .editorial-card {
+    .meta-line {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .seq-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+      min-height: 30px;
+    }
+
+    .keycap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      padding: 0 7px;
+      border-radius: 7px;
+      background: var(--surface-2);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    .pending-text {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .panel {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 16px;
     }
 
-    .editorial-card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: #fff;
+    .panel h2 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
     }
 
-    .editorial-card p, .editorial-card li {
-      font-size: 0.88rem;
+    .panel p, .panel li {
       color: var(--muted);
-      margin-bottom: 10px;
+      font-size: 0.9rem;
     }
 
-    .editorial-card ul { padding-left: 18px; }
-
-    .support-toast {
-      position: fixed;
-      bottom: 24px;
-      right: -380px;
-      width: 330px;
-      background: linear-gradient(135deg, #171922 0%, #111318 100%);
-      border: 1px solid rgba(255, 70, 85, 0.35);
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.75);
-      z-index: 90;
-      transition: right 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    .panel ol {
+      margin: 8px 0 0;
+      padding-left: 20px;
     }
 
-    .support-toast.show { right: 24px; }
-
-    .toast-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .panel li {
       margin-bottom: 6px;
     }
 
-    .toast-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .toast-close {
-      background: transparent;
-      border: none;
-      color: var(--muted);
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .toast-close:hover { color: #fff; }
-
-    .toast-body {
+    .footer {
+      border-top: 1px solid var(--border);
+      margin-top: 28px;
+      padding-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
       font-size: 0.82rem;
       color: var(--muted);
-      margin-bottom: 14px;
     }
 
-    .toast-btn {
-      width: 100%;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: 10px;
+    .ig-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
       border-radius: 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
       font-weight: 700;
       font-size: 0.84rem;
-      cursor: pointer;
-      transition: opacity 0.15s;
     }
 
-    .toast-btn:hover { opacity: 0.9; }
+    .ig-btn:hover {
+      border-color: rgba(255, 70, 85, 0.5);
+    }
 
-    .modal-overlay {
+    .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(9, 10, 13, 0.85);
-      backdrop-filter: blur(8px);
-      z-index: 200;
+      z-index: 60;
+      background: rgba(0, 0, 0, 0.72);
       display: none;
-      justify-content: center;
       align-items: center;
-      padding: 20px;
+      justify-content: center;
+      padding: 16px;
     }
 
-    .modal-overlay.open { display: flex; }
+    .modal-backdrop.open {
+      display: flex;
+    }
 
-    .modal-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
+    .modal {
       width: 100%;
       max-width: 420px;
-      padding: 24px;
-      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
       position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
     }
 
     .modal-close {
       position: absolute;
-      top: 14px;
-      right: 14px;
+      top: 12px;
+      right: 12px;
       background: var(--surface-2);
       border: 1px solid var(--border);
       color: var(--text);
       width: 30px;
       height: 30px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .modal-box h3 {
-      font-size: 1.25rem;
-      margin-bottom: 6px;
-    }
-
-    .modal-box p {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .choice-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 10px;
-    }
-
-    .choice-btn {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 16px 12px;
-      border-radius: 12px;
-      font-family: inherit;
-      font-weight: 700;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .choice-btn:hover { border-color: var(--primary); background: #222630; }
-
-    #verifyScreen {
-      display: none;
-      padding: 10px 0;
-    }
-
-    .spinner {
-      width: 36px;
-      height: 36px;
-      border: 3px solid var(--border);
-      border-top-color: var(--secondary);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 14px;
-    }
-
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    #timerCount {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.6rem;
-      color: var(--secondary);
-      font-weight: 700;
-      margin: 10px 0;
-    }
-
-    #upiRevealScreen {
-      display: none;
-      text-align: left;
-    }
-
-    .top-thank-tab {
-      display: none;
-      background: rgba(56, 189, 248, 0.14);
-      border: 1px solid rgba(56, 189, 248, 0.45);
-      color: var(--secondary);
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 8px 12px;
-      border-radius: 10px;
-      margin-bottom: 12px;
-      text-align: center;
-    }
-
-    .top-thank-tab.visible {
-      display: block;
-    }
-
-    .only-upi-note {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 8px 12px;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
-      margin-bottom: 12px;
+      cursor: pointer;
+      font-weight: 700;
     }
 
-    .qr-container {
-      background: #fff;
-      padding: 10px;
-      border-radius: 12px;
-      width: 220px;
-      max-width: 100%;
-      margin: 0 auto 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .qr-container img {
-      width: 100%;
-      height: auto;
-      max-height: 260px;
+    .qr-img {
+      width: 190px;
+      height: 190px;
       object-fit: contain;
-      display: block;
-      border-radius: 6px;
-    }
-
-    .upi-display {
-      font-family: 'JetBrains Mono', monospace;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      padding: 10px;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      color: var(--text);
-      text-align: center;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-
-    .upi-display:hover {
-      border-color: var(--secondary);
-    }
-
-    #instaRevealScreen {
-      display: none;
-      text-align: center;
-    }
-
-    .insta-link-btn {
-      display: inline-block;
-      width: 100%;
-      background: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      padding: 12px;
       border-radius: 10px;
+      background: #fff;
+      padding: 8px;
+      display: block;
+      margin: 12px auto;
+    }
+
+    .primary-btn {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 14px;
       font-weight: 700;
       font-size: 0.9rem;
-      margin-bottom: 12px;
-    }
-
-    .back-btn {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-size: 0.78rem;
       cursor: pointer;
-      margin-top: 6px;
-    }
-    .back-btn:hover { color: #fff; }
-
-    .couch {
-      position: fixed;
-      inset: 0;
-      background: rgba(9, 10, 13, 0.97);
-      z-index: 100;
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 24px;
-      text-align: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
     }
 
-    .couch.open { display: flex; }
-    .couch h2 { font-size: 1.8rem; margin-bottom: 6px; }
-    .couch p { color: var(--muted); margin-bottom: 24px; }
-    .couch-keys { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 720px; margin-bottom: 24px; }
-    .couch-keys .k { min-width: 52px; height: 52px; font-size: 1.25rem; padding: 0 14px; border-bottom-width: 5px; }
-    .couch-phone { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; color: var(--secondary); background: var(--surface); border: 1px solid var(--border); padding: 10px 20px; border-radius: 8px; margin-bottom: 24px; }
-    .couch-close { background: var(--primary); color: #fff; border: none; padding: 12px 26px; border-radius: 8px; font-weight: 700; cursor: pointer; }
-
-    footer {
-      max-width: 1060px;
-      margin: 0 auto 30px;
-      padding: 20px 18px 0;
-      border-top: 1px solid var(--border);
-      font-size: 0.78rem;
-      color: var(--dim);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    @media (max-width: 820px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-media { border-left: none; border-top: 1px solid var(--border); min-height: 170px; }
-      .cheat-row { grid-template-columns: 1fr; gap: 10px; }
-      .editorial-grid { grid-template-columns: 1fr; }
-      .controls { flex-direction: column; }
-      .plat-btn { flex: 1; }
-      .support-toast { width: calc(100% - 32px); right: -100%; bottom: 16px; }
-      .support-toast.show { right: 16px; }
+    @media (max-width: 640px) {
+      .topbar-inner {
+        padding: 8px 12px;
+      }
+      .brand {
+        font-size: 0.84rem;
+      }
+      .nav-link {
+        font-size: 0.76rem;
+        padding: 5px 8px;
+      }
+      .nav-support {
+        font-size: 0.76rem;
+        padding: 5px 10px;
+      }
+      .hero-media {
+        height: 175px;
+      }
+      .hero-overlay {
+        margin-top: -155px;
+        padding: 12px 14px 16px;
+      }
+      .controls {
+        grid-template-columns: 1fr;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <div class="nav-wrap">
-      <div class="brand">
-        <span>GTA 6 CHEAT CODES HUB</span>
-        <span class="brand-dot">2026</span>
-      </div>
-      <div class="nav-right">
-        <a href="#list">All Cheats</a>
-        <a href="#community">Info</a>
-        <a href="#guide">How to Enter</a>
-        <a href="#" onclick="openSupportModal(); return false;" style="color: var(--primary); font-weight: 700;">Support</a>
-      </div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-title">GTA 6 CHEAT CODES HUB</span>
+        <span class="brand-badge">2026</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="#cheats">Cheats</a>
+        <a class="nav-link" href="#how-to-enter">How to Enter</a>
+        <button class="nav-support" type="button" id="openSupportBtn">Support</button>
+      </nav>
     </div>
   </header>
 
-  <div class="container">
+  <main class="wrap" id="top">
     <section class="hero">
-      <div class="hero-content">
-        <div class="live-pill">● PS5 • PS5 Pro • Xbox Series X|S</div>
-        <h1>GTA 6 Cheat Codes Hub</h1>
-        <p>Confirmed D-pad cheat sequences, unlock requirements, and console input guides for PlayStation 5 and Xbox Series X|S.</p>
-        <div class="countdown-bar">
-          <span>Release Status:</span>
-          <strong id="timer">LIVE NOW</strong>
-        </div>
-      </div>
-
       <div class="hero-media">
-        <img src="banner.jpg" alt="GTA 6 Artwork" onerror="this.style.display='none'" />
+        <img src="banner.jpg" alt="GTA 6 Cheat Codes Banner" />
+      </div>
+      <div class="hero-overlay">
+        <h1>GTA 6 Cheat Codes &amp; Unlock Directory</h1>
+        <p>Directional D-pad cheat sequences and unlock challenges for PS5 and Xbox Series X|S.</p>
+        <div class="status-row">
+          <span class="pill" id="confirmedCountPill">18 Confirmed Codes</span>
+          <span class="pill">61 Total Cheats Tracked</span>
+          <span>Same D-pad arrows on PS5 &amp; Xbox</span>
+        </div>
       </div>
     </section>
 
-    <div class="ad-box">Advertisement — Responsive Display Banner (Google AdSense)</div>
-
-    <div id="list" class="controls">
-      <input type="text" id="search" placeholder="Search cheat (e.g. $250,000, Max Ammo, Infinite Ammo, Weather, Boomazoom)..." />
-      <div class="plat-group">
-        <button class="plat-btn active ps5" id="btnPs5" onclick="setPlat('ps5')">PS5 / PS5 Pro</button>
-        <button class="plat-btn xbox" id="btnXbox" onclick="setPlat('xbox')">Xbox Series X|S</button>
+    <div class="controls" id="cheats">
+      <input
+        class="search-box"
+        id="searchInput"
+        type="search"
+        placeholder="Search cheat name, category, or unlock requirement..."
+        aria-label="Search cheat codes"
+      />
+      <div class="platform-switch" role="group" aria-label="Platform">
+        <button class="plat-btn ps active" type="button" data-plat="PS5">PS5 (L1 + R1)</button>
+        <button class="plat-btn xb" type="button" data-plat="Xbox">Xbox (LB + RB)</button>
       </div>
     </div>
 
-    <div class="tabs">
-      <button class="tab active" data-cat="All">All Codes (17)</button>
-      <button class="tab" data-cat="Combat">Combat & Ammo</button>
-      <button class="tab" data-cat="Player">Player & Health</button>
-      <button class="tab" data-cat="Vehicles">Vehicles</button>
-      <button class="tab" data-cat="World">World & Filters</button>
+    <div class="subbar">
+      <div class="tabs" id="categoryTabs" role="tablist" aria-label="Cheat categories"></div>
+      <div class="scope-toggle" role="group" aria-label="Code confirmation filter">
+        <button class="scope-btn active" type="button" data-scope="confirmed">Confirmed Only</button>
+        <button class="scope-btn" type="button" data-scope="all">All 61 Cheats</button>
+      </div>
     </div>
 
-    <div class="cheat-table" id="cheatList"></div>
+    <section class="grid" id="cheatGrid" aria-live="polite"></section>
 
-    <div class="ad-box">Advertisement — In-Feed Display Unit (Google AdSense)</div>
-
-    <section id="community" class="editorial-grid">
-      <div class="editorial-card">
-        <h2>How GTA 6 Cheats Work</h2>
-        <p>GTA 6 locks cheats behind story completion and individual unlock challenges rather than letting you enter them from the start of a new playthrough.</p>
-        <p><strong>Important Save Warning:</strong> Activating cheats disables saving, trophies, and achievements for that session—save your main file first.</p>
-      </div>
-
-      <div class="editorial-card">
-        <h2>How to Enter Codes on Console</h2>
-        <ul>
-          <li><strong>Unlock First:</strong> Finish the main story and complete each cheat's unlock requirement to open the Cheats tab under Progress.</li>
-          <li><strong>D-Pad Input:</strong> Open your in-game phone, hold <strong>L1 + R1</strong> on PS5 or <strong>LB + RB</strong> on Xbox, and enter the D-pad sequence.</li>
-          <li><strong>Same Sequences:</strong> Both PS5 and Xbox Series X|S use the same D-pad sequences.</li>
-        </ul>
-      </div>
+    <section class="panel" id="how-to-enter">
+      <h2>How to Enter Cheats on PS5 &amp; Xbox Series X|S</h2>
+      <ol>
+        <li>Complete the main story and meet the specific unlock requirement for the cheat you want.</li>
+        <li>Press <strong>Up on the D-pad</strong> to open the in-game phone.</li>
+        <li>On <strong>PS5</strong>, hold <strong>L1</strong> and press <strong>R1</strong>; on <strong>Xbox Series X|S</strong>, hold <strong>LB</strong> and press <strong>RB</strong>.</li>
+        <li>While holding those buttons, enter the directional arrow sequence on the D-pad.</li>
+      </ol>
     </section>
 
-    <section id="guide" class="editorial-grid">
-      <div class="editorial-card">
-        <h2>Unlock Requirements & Challenges</h2>
-        <p>Some cheats unlock after finishing the campaign, while others require shooting range medals, workouts, store robberies, or discovering specific vehicles.</p>
-      </div>
+    <footer class="footer">
+      <div>Unofficial fan guide. Not affiliated with Rockstar Games or Take-Two Interactive.</div>
+      <a
+        class="ig-btn"
+        href="https://www.instagram.com/vivaan.911/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Follow the Creator on Instagram
+      </a>
+    </footer>
+  </main>
 
-      <div class="editorial-card">
-        <h2>Verification Status</h2>
-        <p>Sequences marked <strong>Confirmed</strong> match documented D-pad inputs; any pending or disputed entries are clearly labeled so you don't waste time.</p>
-      </div>
-    </section>
-  </div>
-
-  <!-- TIMED TOAST (7 SECONDS) -->
-  <div class="support-toast" id="supportToast">
-    <div class="toast-header">
-      <div class="toast-title">☕ Support the Creator</div>
-      <button class="toast-close" onclick="closeToast()">✕</button>
-    </div>
-    <div class="toast-body">
-      Check out support options or visit the creator's Instagram.
-    </div>
-    <button class="toast-btn" onclick="openSupportModal()">Open Support Options</button>
-  </div>
-
-  <!-- SUPPORT MODAL -->
-  <div class="modal-overlay" id="supportModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeSupportModal()">✕</button>
-
-      <!-- STEP 1: SUPPORT OPTIONS -->
-      <div id="choiceScreen">
-        <h3>Support Options</h3>
-        <p>Choose how you'd like to support or connect:</p>
-        <div class="choice-grid">
-          <button class="choice-btn" onclick="startVerification('payment', 10)">
-            <span style="font-size: 1.4rem;">💳</span>
-            Payment Option
-          </button>
-          <button class="choice-btn" onclick="startVerification('insta', 5)">
-            <span style="font-size: 1.4rem;">📸</span>
-            Creator Instagram
-          </button>
-        </div>
-      </div>
-
-      <!-- STEP 2: COUNTDOWN (NO UPI DETAILS SHOWN BEFORE COMPLETION) -->
-      <div id="verifyScreen">
-        <div class="spinner"></div>
-        <h3 id="verifyHeading" style="margin-bottom: 4px;">Support Options</h3>
-        <p id="verifySubLabel" style="font-size: 0.85rem; color: var(--text); font-weight: 600; margin-bottom: 4px;"></p>
-        <p style="font-size: 0.8rem; margin-bottom: 6px;">Please wait a moment...</p>
-        <div id="timerCount">10</div>
-        <p style="font-size: 0.72rem; color: var(--dim);">Checking availability...</p>
-      </div>
-
-      <!-- STEP 3A: PAYMENT REVEAL (ONLY UPI SHOWN AT THE LAST STEP) -->
-      <div id="upiRevealScreen">
-        <div class="top-thank-tab" id="topThankTab">Thank you for reaching this page.</div>
-        <h3 style="margin-bottom: 6px;">Support Options — Payment Option</h3>
-        <div class="only-upi-note">Currently only UPI is available.</div>
-        <div class="qr-container">
-          <img src="upi-qr.png" alt="UPI QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <span style="display:none; font-size:0.75rem; color:#000; padding: 20px;">Add upi-qr.png to folder</span>
-        </div>
-        <div class="upi-display" onclick="copyText(this, 'vivaanvernekar99@okaxis')" title="Click to copy UPI ID">
-          📋 vivaanvernekar99@okaxis (Click to Copy)
-        </div>
-        <button class="back-btn" onclick="resetModalViews()">← Back to support options</button>
-      </div>
-
-      <!-- STEP 3B: CREATOR INSTAGRAM REVEAL -->
-      <div id="instaRevealScreen">
-        <h3 style="margin-bottom: 6px;">Creator Instagram 📸</h3>
-        <p style="font-size: 0.84rem; color: var(--muted); margin-bottom: 14px;">
-          Your follow really helps me out and keeps me motivated to build more projects like this!
-        </p>
-        <a href="https://www.instagram.com/vivaan.911?utm_source=qr" target="_blank" rel="noopener noreferrer" class="insta-link-btn">
-          Follow @vivaan.911 on Instagram
-        </a>
-        <button class="back-btn" onclick="resetModalViews()">← Back to support options</button>
+  <div class="modal-backdrop" id="supportModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="supportTitle">
+      <button class="modal-close" type="button" id="closeSupportBtn" aria-label="Close modal">✕</button>
+      <h2 id="supportTitle" style="margin:0 0 6px;font-size:1.1rem;">Support the Creator</h2>
+      <p id="supportStatusText" style="margin:0;color:var(--muted);font-size:0.88rem;">
+        Unlocking support option in <strong id="countdownNum">5</strong>s...
+      </p>
+      <div id="supportContent" style="display:none;margin-top:12px;">
+        <img class="qr-img" src="upi-qr.png" alt="UPI Support QR Code" />
+        <button class="primary-btn" type="button" id="copiedBtn">UPI QR Ready — Scan in Any UPI App</button>
       </div>
     </div>
   </div>
-
-  <!-- COUCH MODE MODAL -->
-  <div class="couch" id="couchModal">
-    <h2 id="cTitle">Cheat</h2>
-    <p id="cPlat">PS5 / PS5 Pro Input</p>
-    <div class="couch-keys" id="cKeys"></div>
-    <div class="couch-phone" id="cPhone"></div>
-    <button class="couch-close" onclick="closeCouch()">Close Couch Mode</button>
-  </div>
-
-  <footer>
-    <div>© 2026 GTA 6 Cheat Codes Hub. Unofficial fan guide. Not affiliated with Rockstar Games.</div>
-    <div>PS5 & Xbox Series X|S use the same D-pad sequences.</div>
-  </footer>
 
   <script>
-    setTimeout(() => {
-      document.getElementById("supportToast").classList.add("show");
-    }, 7000);
+    const CHEATS = [
+      // Player Cheats (10 total)
+      { name: "$250,000", category: "Player", seq: ["↑","→","↓","←","↑","←","↓","→"], unlock: "Complete main story / fence goods", confirmed: true },
+      { name: "Drunk", category: "Player", seq: ["↑","←","→","↑","↑","←","→","↑","←","→"], unlock: "Spend $2,500 on alcohol", confirmed: true },
+      { name: "Raise Heat Level", category: "Player", seq: ["←","↓","→","↓","↑","↓","↑"], unlock: "Lose a 3-star wanted level 25 times", confirmed: true },
+      { name: "Raise Wanted Level", category: "Player", seq: ["←","↓","→","↓","↑","→","↑"], unlock: "Lose a 3-star wanted level 50 times", confirmed: true },
+      { name: "Unlimited Focus", category: "Player", seq: ["↓","↑","↑","↓","↑","↓","↑","↓","↑","→"], unlock: "Complete main story", confirmed: true },
+      { name: "Body Armor", category: "Player", seq: ["↓","↑","←","↑","↑","↑","↑","↑","↓","↓"], unlock: "Complete 100 workouts", confirmed: true },
+      { name: "No Fall Damage", category: "Player", seq: [], unlock: "Survive 20 freefalls from 40+ ft", confirmed: false },
+      { name: "Parachute", category: "Player", seq: [], unlock: "Complete 50 skydives or BASE jumps (300+ ft)", confirmed: false },
+      { name: "Repair Vehicle", category: "Player", seq: [], unlock: "Win 1st place in 10 races", confirmed: false },
+      { name: "Unlimited Nitrous", category: "Player", seq: [], unlock: "Complete 50 stunt jumps", confirmed: false },
 
-    function closeToast() {
-      document.getElementById("supportToast").classList.remove("show");
-    }
+      // Combat Cheats (11 total)
+      { name: "Max Ammo", category: "Combat", seq: ["↓","↑","→","↓","←","←","↑","↑","↓","←"], unlock: "Shooting-range bronze medals", confirmed: true },
+      { name: "Infinite Ammo", category: "Combat", seq: ["↓","↑","→","↓","←","←","↑","↓","↓","↓"], unlock: "25 silver shooting-range medals", confirmed: true },
+      { name: "No Reload", category: "Combat", seq: ["↓","↑","→","↓","←","←","↑","↓","↓","↑"], unlock: "25 gold shooting-range medals", confirmed: true },
+      { name: "Attack Force", category: "Combat", seq: ["↓","↑","←","←","→","↓","↓","↑","↓"], unlock: "Complete main story / melee knockouts", confirmed: true },
+      { name: "Exploding Balls", category: "Combat", seq: ["↓","↑","←","←","→","↓","↓","↑","→"], unlock: "Hit 20 enemies with explosive damage", confirmed: true },
+      { name: "Vehicle Force", category: "Combat", seq: ["↓","↑","←","←","→","↓","←","↑","↓"], unlock: "Kill 25 enemies with vehicles", confirmed: true },
+      { name: "All Explosive Weapons", category: "Combat", seq: [], unlock: "Throw 100 grenades", confirmed: false },
+      { name: "Incendiary Ammo", category: "Combat", seq: [], unlock: "Set 100 enemies on fire", confirmed: false },
+      { name: "Exploding Bottles", category: "Combat", seq: [], unlock: "Throw 100 Molotovs", confirmed: false },
+      { name: "Explosive Shotgun", category: "Combat", seq: [], unlock: "Hit 100 enemies with explosive damage", confirmed: false },
+      { name: "Hauners H-AT", category: "Combat", seq: [], unlock: "Destroy 100 vehicles with explosions", confirmed: false },
 
-    let countdownInterval;
-    let thankTabTimeout;
+      // Spawn Vehicle Cheats (21 total)
+      { name: "Maibatsu Boomazoom", category: "Vehicles", seq: ["←","↑","→","↓","←","←","↑","←"], unlock: "Complete 5 shopping challenges", confirmed: true },
+      { name: "MTL Pumper", category: "Vehicles", seq: ["←","↑","→","↓","←","→","→","↑"], unlock: "Discover MTL Pumper in Progress menu", confirmed: true },
+      { name: "HVY Bulldozer", category: "Vehicles", seq: ["←","↑","→","↓","←","→","→","↓"], unlock: "Discover HVY Bulldozer in Progress menu", confirmed: true },
+      { name: "Interstate Ambulance", category: "Vehicles", seq: [], unlock: "Discover Interstate Ambulance in Progress menu", confirmed: false },
+      { name: "Airboat 09", category: "Vehicles", seq: [], unlock: "Complete 5 survival challenges", confirmed: false },
+      { name: "Bravado Banshee", category: "Vehicles", seq: [], unlock: "Complete all combat challenges", confirmed: false },
+      { name: "Tuff BMX", category: "Vehicles", seq: [], unlock: "Complete 5 fitness challenges", confirmed: false },
+      { name: "Nagasaki Carbon RS", category: "Vehicles", seq: [], unlock: "Complete all exploration challenges", confirmed: false },
+      { name: "'65 Vapid Dominator", category: "Vehicles", seq: [], unlock: "Complete all fitness challenges", confirmed: false },
+      { name: "Progen Emerus", category: "Vehicles", seq: [], unlock: "Complete all vehicle challenges", confirmed: false },
+      { name: "Inflatable Flamingo", category: "Vehicles", seq: [], unlock: "Destroy 50 cocaine flamingos", confirmed: false },
+      { name: "Vapid Stanier G2 Taxi", category: "Vehicles", seq: [], unlock: "Complete 5 sports challenges", confirmed: false },
+      { name: "Hauners P-996 Lazer", category: "Vehicles", seq: [], unlock: "Complete all challenges", confirmed: false },
+      { name: "Lapwing Mallard", category: "Vehicles", seq: [], unlock: "Complete 5 vehicle challenges", confirmed: false },
+      { name: "Brimstone Golfer", category: "Vehicles", seq: [], unlock: "Complete all sports challenges", confirmed: false },
+      { name: "Hauners Rhino Tank", category: "Vehicles", seq: [], unlock: "Complete all survival challenges", confirmed: false },
+      { name: "Maibatsu Sanchez", category: "Vehicles", seq: [], unlock: "Complete 5 criminal challenges", confirmed: false },
+      { name: "Nagasaki Sea Sparrow", category: "Vehicles", seq: [], unlock: "Complete 5 exploration challenges", confirmed: false },
+      { name: "Speeder 700 GT", category: "Vehicles", seq: [], unlock: "Complete 5 combat challenges", confirmed: false },
+      { name: "Truffade Thrax", category: "Vehicles", seq: [], unlock: "Complete all shopping challenges", confirmed: false },
+      { name: "Western Zombie Bobber", category: "Vehicles", seq: [], unlock: "Complete all criminal challenges", confirmed: false },
 
-    function openSupportModal() {
-      closeToast();
-      resetModalViews();
-      document.getElementById("supportModal").classList.add("open");
-    }
+      // Environment Cheats (3 total)
+      { name: "Cycle Weather", category: "Environment", seq: ["↓","→","↑","↓","→","↑","→"], unlock: "Complete main story", confirmed: true },
+      { name: "Move Time Forward", category: "Environment", seq: [], unlock: "Collect 10 watches", confirmed: false },
+      { name: "Pause Time of Day", category: "Environment", seq: [], unlock: "Collect 20 watches", confirmed: false },
 
-    function closeSupportModal() {
-      clearInterval(countdownInterval);
-      clearTimeout(thankTabTimeout);
-      document.getElementById("supportModal").classList.remove("open");
-    }
-
-    function resetModalViews() {
-      clearInterval(countdownInterval);
-      clearTimeout(thankTabTimeout);
-      document.getElementById("topThankTab").classList.remove("visible");
-      document.getElementById("choiceScreen").style.display = "block";
-      document.getElementById("verifyScreen").style.display = "none";
-      document.getElementById("upiRevealScreen").style.display = "none";
-      document.getElementById("instaRevealScreen").style.display = "none";
-    }
-
-    function startVerification(target, seconds) {
-      document.getElementById("choiceScreen").style.display = "none";
-      document.getElementById("verifyScreen").style.display = "block";
-      document.getElementById("verifyHeading").textContent = "Support Options";
-      document.getElementById("verifySubLabel").textContent =
-        target === "payment" ? "Payment Option" : "Creator Instagram";
-
-      let timeLeft = seconds;
-      document.getElementById("timerCount").textContent = timeLeft;
-
-      clearInterval(countdownInterval);
-      countdownInterval = setInterval(() => {
-        timeLeft--;
-        document.getElementById("timerCount").textContent = timeLeft;
-        if (timeLeft <= 0) {
-          clearInterval(countdownInterval);
-          document.getElementById("verifyScreen").style.display = "none";
-          if (target === "payment") {
-            document.getElementById("topThankTab").classList.remove("visible");
-            document.getElementById("upiRevealScreen").style.display = "block";
-            clearTimeout(thankTabTimeout);
-            thankTabTimeout = setTimeout(() => {
-              document.getElementById("topThankTab").classList.add("visible");
-            }, 2000);
-          } else {
-            document.getElementById("instaRevealScreen").style.display = "block";
-          }
-        }
-      }, 1000);
-    }
-
-    function copyText(el, val) {
-      navigator.clipboard.writeText(val);
-      const old = el.textContent;
-      el.textContent = "✅ Copied UPI ID Successfully!";
-      setTimeout(() => { el.textContent = old; }, 1800);
-    }
-
-    const release = new Date("November 19, 2026 00:00:00").getTime();
-    function tick() {
-      const diff = release - Date.now();
-      if (diff <= 0) {
-        document.getElementById("timer").textContent = "LIVE NOW";
-        return;
-      }
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff / 3600000) % 24);
-      const m = Math.floor((diff / 60000) % 60);
-      const s = Math.floor((diff / 1000) % 60);
-      document.getElementById("timer").textContent = `${d}d ${h}h ${m}m ${s}s`;
-    }
-    setInterval(tick, 1000);
-    tick();
-
-    const cheats = [
-      {
-        title: "$250,000 Cash",
-        cat: "Player",
-        confirmed: true,
-        desc: "Unlock: Finish the main story (or earn $250,000 from fenced goods).",
-        seq: ["UP","RIGHT","DOWN","LEFT","UP","LEFT","DOWN","RIGHT"]
-      },
-      {
-        title: "Unlimited Focus",
-        cat: "Player",
-        confirmed: true,
-        desc: "Unlock: Finish the main story.",
-        seq: ["DOWN","UP","UP","DOWN","UP","DOWN","UP","DOWN","UP","RIGHT"]
-      },
-      {
-        title: "Body Armor",
-        cat: "Player",
-        confirmed: true,
-        desc: "Unlock: Complete 100 workouts.",
-        seq: ["DOWN","UP","LEFT","UP","UP","UP","UP","UP","DOWN","DOWN"]
-      },
-      {
-        title: "Raise Heat Level",
-        cat: "Player",
-        confirmed: true,
-        desc: "Unlock: Lose a 3-star wanted level 25 times.",
-        seq: ["LEFT","DOWN","RIGHT","DOWN","UP","DOWN","UP"]
-      },
-      {
-        title: "Max Ammo",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Win bronze medals or better at shooting ranges.",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","UP","DOWN","LEFT"]
-      },
-      {
-        title: "Infinite Ammo",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Win 25 silver medals or better at shooting ranges.",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","DOWN"]
-      },
-      {
-        title: "No Reload",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Win 25 gold medals at shooting ranges.",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","UP"]
-      },
-      {
-        title: "Attack Force",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Finish the main story (or 100 melee takedowns).",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","DOWN"]
-      },
-      {
-        title: "Exploding Balls",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Hit 20 enemies with explosive damage.",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","RIGHT"]
-      },
-      {
-        title: "Vehicle Force",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Kill 25 enemies with a vehicle.",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","LEFT","UP","DOWN"]
-      },
-      {
-        title: "Maibatsu Boomazoom",
-        cat: "Vehicles",
-        confirmed: true,
-        desc: "Unlock: Complete 5 shopping challenges.",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","LEFT","UP","LEFT"]
-      },
-      {
-        title: "MTL Pumper",
-        cat: "Vehicles",
-        confirmed: true,
-        desc: "Unlock: Discover the MTL Pumper in the Progress menu.",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","UP"]
-      },
-      {
-        title: "HVY Bulldozer",
-        cat: "Vehicles",
-        confirmed: true,
-        desc: "Unlock: Discover the HVY Bulldozer in the Progress menu.",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","DOWN"]
-      },
-      {
-        title: "Cycle Weather",
-        cat: "World",
-        confirmed: true,
-        desc: "Unlock: Finish the main story / reveal the map.",
-        seq: ["DOWN","RIGHT","UP","DOWN","RIGHT","UP","RIGHT"]
-      },
-      {
-        title: "Cataclysm Filter",
-        cat: "World",
-        confirmed: true,
-        desc: "Unlock: Discover Martha's Vamos in the Progress menu.",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","RIGHT","RIGHT"]
-      },
-      {
-        title: "Dollhouse Filter",
-        cat: "World",
-        confirmed: true,
-        desc: "Unlock: Spend 8 hours with your partner.",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","DOWN","RIGHT"]
-      },
-      {
-        title: "Faded Glory Filter",
-        cat: "World",
-        confirmed: true,
-        desc: "Unlock: Rob 50 stores with your partner.",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","LEFT","RIGHT"]
-      }
+      // Screen Filter Cheats (16 total)
+      { name: "Cataclysm", category: "Filters", seq: ["↓","↓","↑","→","→","↑","←","←","→","→"], unlock: "Discover Martha's Vamos in Progress menu", confirmed: true },
+      { name: "Dollhouse", category: "Filters", seq: ["↓","↓","↑","→","→","↑","←","←","↓","→"], unlock: "Spend 8 hours with your partner", confirmed: true },
+      { name: "Faded Glory", category: "Filters", seq: ["↓","↓","↑","→","→","↑","←","←","←","→"], unlock: "Rob 50 stores with your partner", confirmed: true },
+      { name: "Golden Hour", category: "Filters", seq: [], unlock: "Spend 4 hours holding hands", confirmed: false },
+      { name: "Powdered Sugar", category: "Filters", seq: [], unlock: "Scan all space debris with WAiNK", confirmed: false },
+      { name: "Pinhole", category: "Filters", seq: [], unlock: "Clear 25 gang operations with partner", confirmed: false },
+      { name: "Neon Jungle", category: "Filters", seq: [], unlock: "Discover all 16 Girlypop Vehicles", confirmed: false },
+      { name: "Yesteryear", category: "Filters", seq: [], unlock: "Discover the Ridgway", confirmed: false },
+      { name: "Videotape", category: "Filters", seq: [], unlock: "Complete 50 activities with partner", confirmed: false },
+      { name: "Dark Mirror", category: "Filters", seq: [], unlock: "Earn $500,000 from vehicle sales", confirmed: false },
+      { name: "Migraine", category: "Filters", seq: [], unlock: "Survive 6 minutes with 6-star wanted level", confirmed: false },
+      { name: "Bubblegum", category: "Filters", seq: [], unlock: "Find all 24 Vice City Flamingos cards", confirmed: false },
+      { name: "Fast Forward", category: "Filters", seq: [], unlock: "Complete 50 meditations", confirmed: false },
+      { name: "Fisheye", category: "Filters", seq: [], unlock: "Catch 100 fish", confirmed: false },
+      { name: "Pixel Art", category: "Filters", seq: [], unlock: "Earn $250,000 selling collectibles", confirmed: false },
+      { name: "Hellscape", category: "Filters", seq: [], unlock: "Steal 100 cop vehicles", confirmed: false }
     ];
 
-    function keyIcon(t) {
-      const icons = {
-        UP: `<span class="k">↑</span>`,
-        DOWN: `<span class="k">↓</span>`,
-        LEFT: `<span class="k">←</span>`,
-        RIGHT: `<span class="k">→</span>`
-      };
-      return icons[t] || `<span class="k">${t}</span>`;
+    const CATEGORIES = ["All", "Player", "Combat", "Vehicles", "Environment", "Filters"];
+    let state = {
+      category: "All",
+      scope: "confirmed",
+      platform: "PS5",
+      query: ""
+    };
+
+    const cheatGrid = document.getElementById("cheatGrid");
+    const categoryTabs = document.getElementById("categoryTabs");
+    const searchInput = document.getElementById("searchInput");
+    const confirmedCountPill = document.getElementById("confirmedCountPill");
+
+    const confirmedTotal = CHEATS.filter(c => c.confirmed).length;
+    confirmedCountPill.textContent = `${confirmedTotal} Confirmed Codes`;
+
+    function renderTabs() {
+      categoryTabs.innerHTML = "";
+      CATEGORIES.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "tab-btn" + (state.category === cat ? " active" : "");
+        const count = CHEATS.filter(c => {
+          const scopeOk = state.scope === "all" ? true : c.confirmed;
+          const catOk = cat === "All" ? true : c.category === cat;
+          return scopeOk && catOk;
+        }).length;
+        btn.textContent = `${cat} (${count})`;
+        btn.addEventListener("click", () => {
+          state.category = cat;
+          renderTabs();
+          renderGrid();
+        });
+        categoryTabs.appendChild(btn);
+      });
     }
 
-    function formatSeqText(seq) {
-      return seq.map(s => s[0] + s.slice(1).toLowerCase()).join(" → ");
-    }
+    function renderGrid() {
+      const q = state.query.trim().toLowerCase();
+      const filtered = CHEATS.filter(c => {
+        const scopeOk = state.scope === "all" ? true : c.confirmed;
+        const catOk = state.category === "All" ? true : c.category === state.category;
+        const searchOk = !q ||
+          c.name.toLowerCase().includes(q) ||
+          c.category.toLowerCase().includes(q) ||
+          c.unlock.toLowerCase().includes(q);
+        return scopeOk && catOk && searchOk;
+      });
 
-    let plat = "ps5";
-    let cat = "All";
-    const listEl = document.getElementById("cheatList");
-    const searchEl = document.getElementById("search");
-
-    function setPlat(p) {
-      plat = p;
-      document.getElementById("btnPs5").classList.toggle("active", p === "ps5");
-      document.getElementById("btnXbox").classList.toggle("active", p === "xbox");
-      render();
-    }
-
-    function copySeq(btn, text) {
-      navigator.clipboard.writeText(text);
-      const old = btn.textContent;
-      btn.textContent = "Copied!";
-      setTimeout(() => { btn.textContent = old; }, 1000);
-    }
-
-    function openCouch(i) {
-      const c = cheats[i];
-      const prefix = plat === "ps5" ? "Hold L1 + R1, then press: " : "Hold LB + RB, then press: ";
-      document.getElementById("cTitle").textContent = c.title;
-      document.getElementById("cPlat").textContent = plat === "ps5" ? "PS5 / PS5 Pro Input" : "Xbox Series X|S Input";
-      document.getElementById("cKeys").innerHTML = c.seq.map(keyIcon).join("");
-      document.getElementById("cPhone").textContent = prefix + formatSeqText(c.seq);
-      document.getElementById("couchModal").classList.add("open");
-    }
-
-    function closeCouch() {
-      document.getElementById("couchModal").classList.remove("open");
-    }
-
-    function render() {
-      const q = searchEl.value.trim().toLowerCase();
-      const filtered = cheats
-        .map((c, idx) => ({ ...c, idx }))
-        .filter(c => (cat === "All" || c.cat === cat) && (c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q)));
-
-      if (filtered.length === 0) {
-        listEl.innerHTML = `<div style="padding:20px; text-align:center; color:var(--muted);">No matching cheat codes found.</div>`;
+      if (!filtered.length) {
+        cheatGrid.innerHTML = `<div class="panel"><p style="margin:0;">No cheats match your current filter or search.</p></div>`;
         return;
       }
 
-      const holdHint = plat === "ps5" ? "L1+R1" : "LB+RB";
-
-      listEl.innerHTML = filtered.map(c => {
+      cheatGrid.innerHTML = filtered.map(c => {
         const badge = c.confirmed
-          ? `<span class="tag-confirmed">Confirmed</span>`
-          : `<span class="tag-unconfirmed">Unconfirmed</span>`;
-        const seqText = `${holdHint}: ${formatSeqText(c.seq)}`;
+          ? `<span class="badge-ok">Confirmed</span>`
+          : `<span class="badge-pending">Code Pending</span>`;
+
+        const keysHtml = c.confirmed && c.seq.length
+          ? c.seq.map(k => `<span class="keycap">${k}</span>`).join("")
+          : `<span class="pending-text">Sequence not yet confirmed — Unlock: ${c.unlock}</span>`;
+
         return `
-          <div class="cheat-row">
+          <article class="card">
             <div>
-              <div class="cheat-title">${c.title} ${badge}</div>
-              <div class="cheat-sub">${c.desc}</div>
+              <div class="card-top">
+                <h3 class="cheat-title">${c.name}</h3>
+                ${badge}
+              </div>
+              <div class="meta-line">${c.category} • Unlock: ${c.unlock}</div>
             </div>
-            <div class="keys">${c.seq.map(keyIcon).join("")}</div>
-            <div class="row-actions">
-              <button class="btn-sm" onclick="copySeq(this, '${seqText}')">Copy Sequence</button>
-              <button class="btn-sm" onclick="openCouch(${c.idx})" title="Full-screen view">📺</button>
-            </div>
-          </div>
+            <div class="seq-box" aria-label="${state.platform} D-pad code">${keysHtml}</div>
+          </article>
         `;
       }).join("");
     }
 
-    document.querySelectorAll(".tab").forEach(b => {
-      b.onclick = () => {
-        document.querySelector(".tab.active").classList.remove("active");
-        b.classList.add("active");
-        cat = b.dataset.cat;
-        render();
-      };
+    document.querySelectorAll(".plat-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        state.platform = btn.dataset.plat;
+        document.querySelectorAll(".plat-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderGrid();
+      });
     });
 
-    searchEl.oninput = render;
-    render();
+    document.querySelectorAll(".scope-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        state.scope = btn.dataset.scope;
+        document.querySelectorAll(".scope-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderTabs();
+        renderGrid();
+      });
+    });
+
+    searchInput.addEventListener("input", () => {
+      state.query = searchInput.value;
+      renderGrid();
+    });
+
+    // Support modal with 5s timer
+    const supportModal = document.getElementById("supportModal");
+    const openSupportBtn = document.getElementById("openSupportBtn");
+    const closeSupportBtn = document.getElementById("closeSupportBtn");
+    const countdownNum = document.getElementById("countdownNum");
+    const supportStatusText = document.getElementById("supportStatusText");
+    const supportContent = document.getElementById("supportContent");
+    let timerId = null;
+
+    function openSupport() {
+      clearInterval(timerId);
+      let left = 5;
+      countdownNum.textContent = left;
+      supportStatusText.innerHTML = `Unlocking support option in <strong id="countdownNum">${left}</strong>s...`;
+      supportContent.style.display = "none";
+      supportModal.classList.add("open");
+      supportModal.setAttribute("aria-hidden", "false");
+
+      timerId = setInterval(() => {
+        left -= 1;
+        const el = document.getElementById("countdownNum");
+        if (left > 0) {
+          if (el) el.textContent = left;
+        } else {
+          clearInterval(timerId);
+          supportStatusText.textContent = "Scan the QR code below to support the creator:";
+          supportContent.style.display = "block";
+        }
+      }, 1000);
+    }
+
+    function closeSupport() {
+      clearInterval(timerId);
+      supportModal.classList.remove("open");
+      supportModal.setAttribute("aria-hidden", "true");
+    }
+
+    openSupportBtn.addEventListener("click", openSupport);
+    closeSupportBtn.addEventListener("click", closeSupport);
+    supportModal.addEventListener("click", e => {
+      if (e.target === supportModal) closeSupport();
+    });
+
+    renderTabs();
+    renderGrid();
   </script>
 </body>
 </html>
