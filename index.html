@@ -2,40 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0c0d10" />
-  <meta name="description" content="GTA 6 Cheat Codes Hub for PS5 and Xbox Series X|S. Confirmed D-pad sequences, unlock requirements, and entry guide." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GTA 6 Cheat Codes Hub for PS5 and Xbox Series X|S. D-pad sequences, couch mode, copy buttons, info guide, and creator support." />
   <title>GTA 6 Cheat Codes Hub (2026) — PS5 &amp; Xbox Series X|S</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0d10'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%23ff4655' stroke-width='4'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='system-ui,-apple-system,sans-serif' font-weight='800' font-size='28'%3EVI%3C/text%3E%3C/svg%3E" />
   <style>
     :root {
       --bg: #0c0d10;
       --surface: #14161c;
-      --surface-2: #1b1e27;
-      --border: rgba(255, 255, 255, 0.09);
-      --text: #f3f5f8;
-      --muted: #9aa2b1;
+      --surface-2: #1c1f28;
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f5f7fa;
+      --muted: #9da5b4;
       --accent: #ff4655;
-      --accent-2: #ff7b54;
-      --ps: #2e7cf6;
+      --accent-2: #ff7a52;
+      --ps: #2d7cf6;
       --xb: #27b35b;
-      --ok: #2ecc71;
-      --warn: #f1c40f;
-      --radius: 14px;
+      --radius: 16px;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html, body {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       margin: 0;
       padding: 0;
       background: var(--bg);
       color: var(--text);
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.5;
-      -webkit-text-size-adjust: 100%;
       overflow-x: hidden;
     }
 
@@ -48,572 +48,634 @@
       font-family: inherit;
     }
 
-    .topbar {
+    /* Top Navigation */
+    .header {
       position: sticky;
       top: 0;
-      z-index: 30;
-      background: rgba(12, 13, 16, 0.92);
-      backdrop-filter: blur(12px);
+      z-index: 40;
+      background: rgba(12, 13, 16, 0.9);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
 
-    .topbar-inner {
-      max-width: 1120px;
+    .header-inner {
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 10px 14px;
+      padding: 12px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      font-size: 0.92rem;
-      min-width: 0;
+      gap: 10px;
+      font-weight: 900;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
     }
 
-    .brand-title {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .brand-badge {
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 2px 7px;
-      border-radius: 999px;
+    .logo-badge {
       background: rgba(255, 70, 85, 0.16);
-      color: #ff7b86;
+      color: #ff808a;
       border: 1px solid rgba(255, 70, 85, 0.35);
-      flex-shrink: 0;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
-    .nav-link {
-      font-size: 0.82rem;
-      font-weight: 600;
+    .nav-btn {
+      background: transparent;
+      border: 1px solid transparent;
       color: var(--muted);
-      padding: 6px 10px;
-      border-radius: 9px;
-      transition: background 0.15s ease, color 0.15s ease;
-      white-space: nowrap;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 7px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
     }
 
-    .nav-link:hover {
+    .nav-btn:hover,
+    .nav-btn.active {
       color: var(--text);
       background: var(--surface-2);
+      border-color: var(--border);
     }
 
-    .nav-support {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #fff;
+    .support-cta {
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
       border: 0;
-      padding: 6px 12px;
-      border-radius: 9px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      padding: 8px 14px;
+      border-radius: 10px;
       cursor: pointer;
-      white-space: nowrap;
     }
 
-    .wrap {
-      max-width: 1120px;
+    .container {
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 18px 14px 56px;
+      padding: 20px 18px 64px;
     }
 
-    .hero {
+    /* Banner (only slightly trimmed height vs full hero) */
+    .banner {
       position: relative;
       border-radius: var(--radius);
       overflow: hidden;
       border: 1px solid var(--border);
       background: var(--surface);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      min-height: 245px;
+      display: flex;
+      align-items: flex-end;
     }
 
-    .hero-media {
-      position: relative;
-      width: 100%;
-      height: 220px;
-      background: #12141a;
-    }
-
-    .hero-media img {
+    .banner img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      opacity: 0.42;
+      opacity: 0.38;
     }
 
-    .hero-overlay {
+    .banner-content {
       position: relative;
-      margin-top: -175px;
-      padding: 16px 18px 20px;
-      background: linear-gradient(180deg, rgba(12, 13, 16, 0.25) 0%, rgba(12, 13, 16, 0.92) 45%, rgba(12, 13, 16, 0.98) 100%);
+      z-index: 2;
+      width: 100%;
+      padding: 22px 24px;
+      background: linear-gradient(180deg, rgba(12, 13, 16, 0.15) 0%, rgba(12, 13, 16, 0.92) 70%, rgba(12, 13, 16, 0.98) 100%);
     }
 
-    .hero h1 {
+    .banner h1 {
       margin: 0 0 6px;
-      font-size: clamp(1.3rem, 4.5vw, 2.05rem);
-      line-height: 1.18;
+      font-size: clamp(1.5rem, 3.6vw, 2.35rem);
+      line-height: 1.15;
       letter-spacing: -0.02em;
     }
 
-    .hero p {
+    .banner p {
       margin: 0;
       color: var(--muted);
-      font-size: 0.92rem;
-      max-width: 720px;
+      font-size: 0.96rem;
+      max-width: 760px;
     }
 
-    .status-row {
+    .banner-tags {
       margin-top: 12px;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      align-items: center;
-      font-size: 0.8rem;
-      color: var(--muted);
     }
 
-    .pill {
-      background: var(--surface-2);
+    .tag {
+      background: rgba(28, 31, 40, 0.9);
       border: 1px solid var(--border);
-      padding: 4px 10px;
+      padding: 5px 11px;
       border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
       color: var(--text);
-      font-weight: 600;
     }
 
-    .controls {
-      display: grid;
-      grid-template-columns: 1fr auto;
+    /* Controls */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
     }
 
-    .search-box {
-      width: 100%;
+    .search {
+      flex: 1 1 260px;
       background: var(--surface);
       border: 1px solid var(--border);
       color: var(--text);
-      border-radius: 11px;
-      padding: 10px 13px;
+      padding: 11px 14px;
+      border-radius: 12px;
       font-size: 0.92rem;
       outline: none;
     }
 
-    .search-box:focus {
-      border-color: rgba(255, 70, 85, 0.6);
+    .search:focus {
+      border-color: rgba(255, 70, 85, 0.65);
     }
 
-    .platform-switch {
+    .toolbar-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .seg {
       display: inline-flex;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 11px;
+      border-radius: 12px;
       padding: 3px;
       gap: 3px;
     }
 
-    .plat-btn {
+    .seg-btn {
       border: 0;
       background: transparent;
       color: var(--muted);
+      font-size: 0.84rem;
       font-weight: 700;
-      font-size: 0.82rem;
       padding: 7px 12px;
-      border-radius: 8px;
+      border-radius: 9px;
       cursor: pointer;
     }
 
-    .plat-btn.active.ps {
-      background: rgba(46, 124, 246, 0.2);
-      color: #7ab0ff;
+    .seg-btn.active.ps {
+      background: rgba(45, 124, 246, 0.22);
+      color: #84b6ff;
     }
 
-    .plat-btn.active.xb {
-      background: rgba(39, 179, 91, 0.2);
-      color: #6ce097;
+    .seg-btn.active.xb {
+      background: rgba(39, 179, 91, 0.22);
+      color: #70e59b;
     }
 
-    .subbar {
+    .seg-btn.active.mode {
+      background: rgba(255, 70, 85, 0.22);
+      color: #ff8e97;
+    }
+
+    .cat-bar {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 14px;
+      gap: 7px;
+      margin-bottom: 18px;
     }
 
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .tab-btn {
+    .cat-btn {
       background: var(--surface);
       border: 1px solid var(--border);
       color: var(--muted);
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 700;
+      padding: 7px 13px;
+      border-radius: 999px;
       cursor: pointer;
     }
 
-    .tab-btn.active {
+    .cat-btn.active {
       background: var(--text);
       color: var(--bg);
       border-color: var(--text);
     }
 
-    .scope-toggle {
-      display: inline-flex;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 3px;
-      gap: 3px;
-    }
-
-    .scope-btn {
-      border: 0;
-      background: transparent;
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 5px 11px;
-      border-radius: 999px;
-      cursor: pointer;
-    }
-
-    .scope-btn.active {
-      background: rgba(255, 70, 85, 0.2);
-      color: #ff8a93;
-    }
-
+    /* Cards Grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 12px;
-      margin-bottom: 26px;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .grid.couch {
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 14px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .grid.couch .card {
+      padding: 20px;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 10px;
     }
 
-    .card-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .cheat-title {
+    .card-title {
       margin: 0;
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 800;
     }
 
-    .badge-ok {
-      font-size: 0.7rem;
+    .grid.couch .card-title {
+      font-size: 1.25rem;
+    }
+
+    .cat-pill {
+      font-size: 0.72rem;
       font-weight: 700;
-      padding: 2px 8px;
+      padding: 3px 9px;
       border-radius: 999px;
-      background: rgba(46, 204, 113, 0.15);
-      color: #6ce097;
-      border: 1px solid rgba(46, 204, 113, 0.35);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--muted);
       white-space: nowrap;
     }
 
-    .badge-pending {
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(241, 196, 15, 0.14);
-      color: #f7d558;
-      border: 1px solid rgba(241, 196, 15, 0.32);
-      white-space: nowrap;
+    .card-desc {
+      margin: 4px 0 0;
+      font-size: 0.85rem;
+      color: var(--muted);
     }
 
-    .meta-line {
+    .keys {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+      height: 32px;
+      padding: 0 8px;
+      border-radius: 8px;
+      background: var(--surface-2);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 0.92rem;
+      font-weight: 900;
+    }
+
+    .grid.couch .key {
+      min-width: 40px;
+      height: 40px;
+      font-size: 1.12rem;
+    }
+
+    .card-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
       font-size: 0.78rem;
       color: var(--muted);
     }
 
-    .seq-box {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      align-items: center;
-      min-height: 30px;
-    }
-
-    .keycap {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 28px;
-      height: 28px;
-      padding: 0 7px;
-      border-radius: 7px;
+    .copy-btn {
       background: var(--surface-2);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-weight: 800;
-      font-size: 0.85rem;
+      border: 1px solid var(--border);
       color: var(--text);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
-    .pending-text {
-      font-size: 0.82rem;
-      color: var(--muted);
-      font-style: italic;
+    .copy-btn:hover {
+      border-color: rgba(255, 255, 255, 0.28);
     }
 
-    .panel {
+    /* Info & Guide Sections */
+    .section-box {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 16px;
-      margin-bottom: 16px;
+      padding: 20px;
+      margin-bottom: 18px;
     }
 
-    .panel h2 {
+    .section-box h2 {
       margin: 0 0 8px;
-      font-size: 1.08rem;
+      font-size: 1.15rem;
     }
 
-    .panel p, .panel li {
+    .section-box p,
+    .section-box li {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
-    .panel ol {
+    .section-box ol {
       margin: 8px 0 0;
       padding-left: 20px;
     }
 
-    .panel li {
+    .section-box li {
       margin-bottom: 6px;
     }
 
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .info-mini {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .info-mini h3 {
+      margin: 0 0 4px;
+      font-size: 0.95rem;
+    }
+
+    .info-mini p {
+      margin: 0;
+      font-size: 0.84rem;
+    }
+
+    /* Footer */
     .footer {
-      border-top: 1px solid var(--border);
-      margin-top: 28px;
+      margin-top: 26px;
       padding-top: 18px;
+      border-top: 1px solid var(--border);
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      font-size: 0.82rem;
       color: var(--muted);
-    }
-
-    .ig-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 14px;
-      border-radius: 10px;
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-weight: 700;
       font-size: 0.84rem;
     }
 
-    .ig-btn:hover {
-      border-color: rgba(255, 70, 85, 0.5);
+    .ig-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 700;
+      padding: 9px 15px;
+      border-radius: 11px;
     }
 
-    .modal-backdrop {
+    .ig-link:hover {
+      border-color: rgba(255, 70, 85, 0.55);
+    }
+
+    /* Support Modal */
+    .modal-bg {
       position: fixed;
       inset: 0;
-      z-index: 60;
-      background: rgba(0, 0, 0, 0.72);
+      z-index: 70;
+      background: rgba(0, 0, 0, 0.75);
       display: none;
       align-items: center;
       justify-content: center;
       padding: 16px;
     }
 
-    .modal-backdrop.open {
+    .modal-bg.open {
       display: flex;
     }
 
     .modal {
+      position: relative;
       width: 100%;
-      max-width: 420px;
+      max-width: 430px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 18px;
-      position: relative;
+      padding: 20px;
     }
 
-    .modal-close {
+    .modal-x {
       position: absolute;
       top: 12px;
       right: 12px;
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      color: var(--text);
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text);
+      font-weight: 800;
       cursor: pointer;
-      font-weight: 700;
     }
 
-    .qr-img {
-      width: 190px;
-      height: 190px;
-      object-fit: contain;
-      border-radius: 10px;
-      background: #fff;
+    .qr-box {
+      width: 196px;
+      height: 196px;
+      margin: 14px auto;
       padding: 8px;
-      display: block;
-      margin: 12px auto;
+      border-radius: 12px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .primary-btn {
+    .qr-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .btn-grad {
       width: 100%;
       border: 0;
-      border-radius: 10px;
-      padding: 10px 14px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
+      border-radius: 11px;
+      padding: 11px 14px;
+      font-weight: 800;
+      font-size: 0.92rem;
       color: #fff;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      cursor: pointer;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 80;
+      background: var(--surface-2);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.2s ease;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     @media (max-width: 640px) {
-      .topbar-inner {
-        padding: 8px 12px;
+      .banner {
+        min-height: 205px;
       }
-      .brand {
-        font-size: 0.84rem;
+      .banner-content {
+        padding: 16px;
       }
-      .nav-link {
-        font-size: 0.76rem;
-        padding: 5px 8px;
-      }
-      .nav-support {
-        font-size: 0.76rem;
-        padding: 5px 10px;
-      }
-      .hero-media {
-        height: 175px;
-      }
-      .hero-overlay {
-        margin-top: -155px;
-        padding: 12px 14px 16px;
-      }
-      .controls {
-        grid-template-columns: 1fr;
-      }
-      .grid {
+      .grid,
+      .grid.couch {
         grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="#top">
-        <span class="brand-title">GTA 6 CHEAT CODES HUB</span>
-        <span class="brand-badge">2026</span>
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="#top">
+        <span>GTA 6 CHEAT CODES HUB</span>
+        <span class="logo-badge">2026</span>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="nav-link" href="#cheats">Cheats</a>
-        <a class="nav-link" href="#how-to-enter">How to Enter</a>
-        <button class="nav-support" type="button" id="openSupportBtn">Support</button>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-btn active" href="#cheats-section">All Cheats</a>
+        <a class="nav-btn" href="#info-section">Info</a>
+        <a class="nav-btn" href="#how-to-enter">How to Enter</a>
+        <button class="support-cta" type="button" id="openSupport">☕ Buy Coffee</button>
       </nav>
     </div>
   </header>
 
-  <main class="wrap" id="top">
-    <section class="hero">
-      <div class="hero-media">
-        <img src="banner.jpg" alt="GTA 6 Cheat Codes Banner" />
-      </div>
-      <div class="hero-overlay">
-        <h1>GTA 6 Cheat Codes &amp; Unlock Directory</h1>
-        <p>Directional D-pad cheat sequences and unlock challenges for PS5 and Xbox Series X|S.</p>
-        <div class="status-row">
-          <span class="pill" id="confirmedCountPill">18 Confirmed Codes</span>
-          <span class="pill">61 Total Cheats Tracked</span>
-          <span>Same D-pad arrows on PS5 &amp; Xbox</span>
+  <main class="container" id="top">
+    <section class="banner">
+      <img src="banner.jpg" alt="GTA 6 Cheat Codes Hub Banner" />
+      <div class="banner-content">
+        <h1>GTA 6 Cheat Codes &amp; Quick Reference</h1>
+        <p>Directional D-pad sequences, couch/TV mode, one-tap copy buttons, and unlock info for PS5 &amp; Xbox Series X|S.</p>
+        <div class="banner-tags">
+          <span class="tag" id="totalBadge">18 Confirmed Codes</span>
+          <span class="tag">PS5 &amp; Xbox Series X|S</span>
+          <span class="tag">📺 Couch Mode Ready</span>
         </div>
       </div>
     </section>
 
-    <div class="controls" id="cheats">
-      <input
-        class="search-box"
-        id="searchInput"
-        type="search"
-        placeholder="Search cheat name, category, or unlock requirement..."
-        aria-label="Search cheat codes"
-      />
-      <div class="platform-switch" role="group" aria-label="Platform">
-        <button class="plat-btn ps active" type="button" data-plat="PS5">PS5 (L1 + R1)</button>
-        <button class="plat-btn xb" type="button" data-plat="Xbox">Xbox (LB + RB)</button>
+    <section id="cheats-section">
+      <div class="toolbar">
+        <input
+          class="search"
+          id="searchBox"
+          type="search"
+          placeholder="Search cheat name, effect, or category..."
+          aria-label="Search cheat codes"
+        />
+        <div class="toolbar-right">
+          <div class="seg" role="group" aria-label="Platform selector">
+            <button class="seg-btn ps active" type="button" data-plat="PS5">PS5</button>
+            <button class="seg-btn xb" type="button" data-plat="Xbox">Xbox</button>
+          </div>
+          <div class="seg" role="group" aria-label="View mode selector">
+            <button class="seg-btn mode active" type="button" id="standardViewBtn">Standard</button>
+            <button class="seg-btn mode" type="button" id="couchViewBtn">📺 Couch Mode</button>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="subbar">
-      <div class="tabs" id="categoryTabs" role="tablist" aria-label="Cheat categories"></div>
-      <div class="scope-toggle" role="group" aria-label="Code confirmation filter">
-        <button class="scope-btn active" type="button" data-scope="confirmed">Confirmed Only</button>
-        <button class="scope-btn" type="button" data-scope="all">All 61 Cheats</button>
+      <div class="cat-bar" id="catBar"></div>
+      <div class="grid" id="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section-box" id="info-section">
+      <h2>Info &amp; Community Notes</h2>
+      <p>Keep these notes in mind while using the cheat directory across story and free-roam sessions:</p>
+      <div class="info-cards">
+        <div class="info-mini">
+          <h3>Unlock Requirements</h3>
+          <p>Some cheat codes require completing story milestones, shooting-range medals, or specific challenges first.</p>
+        </div>
+        <div class="info-mini">
+          <h3>Couch Mode (📺)</h3>
+          <p>Switch to Couch Mode for larger arrow keycaps that are easier to read from across the room while holding a controller.</p>
+        </div>
+        <div class="info-mini">
+          <h3>Community &amp; Updates</h3>
+          <p>Check back for newly verified D-pad sequences, vehicle spawns, and screen filters as new codes are confirmed.</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <section class="grid" id="cheatGrid" aria-live="polite"></section>
-
-    <section class="panel" id="how-to-enter">
-      <h2>How to Enter Cheats on PS5 &amp; Xbox Series X|S</h2>
+    <section class="section-box" id="how-to-enter">
+      <h2>How to Enter Cheat Codes</h2>
       <ol>
-        <li>Complete the main story and meet the specific unlock requirement for the cheat you want.</li>
-        <li>Press <strong>Up on the D-pad</strong> to open the in-game phone.</li>
-        <li>On <strong>PS5</strong>, hold <strong>L1</strong> and press <strong>R1</strong>; on <strong>Xbox Series X|S</strong>, hold <strong>LB</strong> and press <strong>RB</strong>.</li>
-        <li>While holding those buttons, enter the directional arrow sequence on the D-pad.</li>
+        <li>Make sure you have met the unlock requirement for the cheat code you want to use.</li>
+        <li>Press <strong>Up on the D-pad</strong> in-game to bring up the phone menu.</li>
+        <li>Hold <strong>L1 + R1</strong> on <strong>PS5</strong> (or <strong>LB + RB</strong> on <strong>Xbox Series X|S</strong>).</li>
+        <li>While holding those buttons, input the directional arrow sequence on the D-pad without pausing too long.</li>
       </ol>
     </section>
 
     <footer class="footer">
       <div>Unofficial fan guide. Not affiliated with Rockstar Games or Take-Two Interactive.</div>
       <a
-        class="ig-btn"
+        class="ig-link"
         href="https://www.instagram.com/vivaan.911/"
         target="_blank"
         rel="noopener noreferrer"
@@ -623,241 +685,209 @@
     </footer>
   </main>
 
-  <div class="modal-backdrop" id="supportModal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="supportTitle">
-      <button class="modal-close" type="button" id="closeSupportBtn" aria-label="Close modal">✕</button>
-      <h2 id="supportTitle" style="margin:0 0 6px;font-size:1.1rem;">Support the Creator</h2>
-      <p id="supportStatusText" style="margin:0;color:var(--muted);font-size:0.88rem;">
-        Unlocking support option in <strong id="countdownNum">5</strong>s...
+  <div class="modal-bg" id="supportModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+      <button class="modal-x" type="button" id="closeSupport" aria-label="Close">✕</button>
+      <h2 id="modalHeading" style="margin:0 0 6px;font-size:1.15rem;">Buy the Creator a Coffee</h2>
+      <p id="modalMsg" style="margin:0;color:var(--muted);font-size:0.9rem;">
+        Preparing support QR in <strong id="timerSec">5</strong>s...
       </p>
-      <div id="supportContent" style="display:none;margin-top:12px;">
-        <img class="qr-img" src="upi-qr.png" alt="UPI Support QR Code" />
-        <button class="primary-btn" type="button" id="copiedBtn">UPI QR Ready — Scan in Any UPI App</button>
+      <div id="qrPanel" style="display:none;margin-top:10px;">
+        <div class="qr-box">
+          <img src="upi-qr.png" alt="UPI QR Code" />
+        </div>
+        <button class="btn-grad" type="button" id="doneSupportBtn">Scan QR in Any UPI App</button>
       </div>
     </div>
   </div>
 
+  <div class="toast" id="toast">Copied sequence</div>
+
   <script>
     const CHEATS = [
-      // Player Cheats (10 total)
-      { name: "$250,000", category: "Player", seq: ["↑","→","↓","←","↑","←","↓","→"], unlock: "Complete main story / fence goods", confirmed: true },
-      { name: "Drunk", category: "Player", seq: ["↑","←","→","↑","↑","←","→","↑","←","→"], unlock: "Spend $2,500 on alcohol", confirmed: true },
-      { name: "Raise Heat Level", category: "Player", seq: ["←","↓","→","↓","↑","↓","↑"], unlock: "Lose a 3-star wanted level 25 times", confirmed: true },
-      { name: "Raise Wanted Level", category: "Player", seq: ["←","↓","→","↓","↑","→","↑"], unlock: "Lose a 3-star wanted level 50 times", confirmed: true },
-      { name: "Unlimited Focus", category: "Player", seq: ["↓","↑","↑","↓","↑","↓","↑","↓","↑","→"], unlock: "Complete main story", confirmed: true },
-      { name: "Body Armor", category: "Player", seq: ["↓","↑","←","↑","↑","↑","↑","↑","↓","↓"], unlock: "Complete 100 workouts", confirmed: true },
-      { name: "No Fall Damage", category: "Player", seq: [], unlock: "Survive 20 freefalls from 40+ ft", confirmed: false },
-      { name: "Parachute", category: "Player", seq: [], unlock: "Complete 50 skydives or BASE jumps (300+ ft)", confirmed: false },
-      { name: "Repair Vehicle", category: "Player", seq: [], unlock: "Win 1st place in 10 races", confirmed: false },
-      { name: "Unlimited Nitrous", category: "Player", seq: [], unlock: "Complete 50 stunt jumps", confirmed: false },
+      { name: "$250,000", category: "Player", desc: "Cash boost • Unlock: Story / fence goods", seq: ["↑","→","↓","←","↑","←","↓","→"] },
+      { name: "Drunk", category: "Player", desc: "Wobble effect • Unlock: Spend $2,500 on alcohol", seq: ["↑","←","→","↑","↑","←","→","↑","←","→"] },
+      { name: "Raise Heat Level", category: "Player", desc: "Increases heat • Unlock: Lose 3-star wanted level 25x", seq: ["←","↓","→","↓","↑","↓","↑"] },
+      { name: "Raise Wanted Level", category: "Player", desc: "Boosts wanted level • Unlock: Lose 3-star wanted level 50x", seq: ["←","↓","→","↓","↑","→","↑"] },
+      { name: "Unlimited Focus", category: "Player", desc: "Full focus gauge • Unlock: Complete main story", seq: ["↓","↑","↑","↓","↑","↓","↑","↓","↑","→"] },
+      { name: "Body Armor", category: "Player", desc: "Equips body armor • Unlock: Complete 100 workouts", seq: ["↓","↑","←","↑","↑","↑","↑","↑","↓","↓"] },
 
-      // Combat Cheats (11 total)
-      { name: "Max Ammo", category: "Combat", seq: ["↓","↑","→","↓","←","←","↑","↑","↓","←"], unlock: "Shooting-range bronze medals", confirmed: true },
-      { name: "Infinite Ammo", category: "Combat", seq: ["↓","↑","→","↓","←","←","↑","↓","↓","↓"], unlock: "25 silver shooting-range medals", confirmed: true },
-      { name: "No Reload", category: "Combat", seq: ["↓","↑","→","↓","←","←","↑","↓","↓","↑"], unlock: "25 gold shooting-range medals", confirmed: true },
-      { name: "Attack Force", category: "Combat", seq: ["↓","↑","←","←","→","↓","↓","↑","↓"], unlock: "Complete main story / melee knockouts", confirmed: true },
-      { name: "Exploding Balls", category: "Combat", seq: ["↓","↑","←","←","→","↓","↓","↑","→"], unlock: "Hit 20 enemies with explosive damage", confirmed: true },
-      { name: "Vehicle Force", category: "Combat", seq: ["↓","↑","←","←","→","↓","←","↑","↓"], unlock: "Kill 25 enemies with vehicles", confirmed: true },
-      { name: "All Explosive Weapons", category: "Combat", seq: [], unlock: "Throw 100 grenades", confirmed: false },
-      { name: "Incendiary Ammo", category: "Combat", seq: [], unlock: "Set 100 enemies on fire", confirmed: false },
-      { name: "Exploding Bottles", category: "Combat", seq: [], unlock: "Throw 100 Molotovs", confirmed: false },
-      { name: "Explosive Shotgun", category: "Combat", seq: [], unlock: "Hit 100 enemies with explosive damage", confirmed: false },
-      { name: "Hauners H-AT", category: "Combat", seq: [], unlock: "Destroy 100 vehicles with explosions", confirmed: false },
+      { name: "Max Ammo", category: "Combat", desc: "Fills ammo • Unlock: Shooting-range bronze medals", seq: ["↓","↑","→","↓","←","←","↑","↑","↓","←"] },
+      { name: "Infinite Ammo", category: "Combat", desc: "Endless ammo • Unlock: 25 silver shooting-range medals", seq: ["↓","↑","→","↓","←","←","↑","↓","↓","↓"] },
+      { name: "No Reload", category: "Combat", desc: "Zero reload delay • Unlock: 25 gold shooting-range medals", seq: ["↓","↑","→","↓","←","←","↑","↓","↓","↑"] },
+      { name: "Attack Force", category: "Combat", desc: "Stronger melee hits • Unlock: Story / melee knockouts", seq: ["↓","↑","←","←","→","↓","↓","↑","↓"] },
+      { name: "Exploding Balls", category: "Combat", desc: "Explosive impacts • Unlock: 20 explosive enemy hits", seq: ["↓","↑","←","←","→","↓","↓","↑","→"] },
+      { name: "Vehicle Force", category: "Combat", desc: "Heavy ram impact • Unlock: 25 vehicle kills", seq: ["↓","↑","←","←","→","↓","←","↑","↓"] },
 
-      // Spawn Vehicle Cheats (21 total)
-      { name: "Maibatsu Boomazoom", category: "Vehicles", seq: ["←","↑","→","↓","←","←","↑","←"], unlock: "Complete 5 shopping challenges", confirmed: true },
-      { name: "MTL Pumper", category: "Vehicles", seq: ["←","↑","→","↓","←","→","→","↑"], unlock: "Discover MTL Pumper in Progress menu", confirmed: true },
-      { name: "HVY Bulldozer", category: "Vehicles", seq: ["←","↑","→","↓","←","→","→","↓"], unlock: "Discover HVY Bulldozer in Progress menu", confirmed: true },
-      { name: "Interstate Ambulance", category: "Vehicles", seq: [], unlock: "Discover Interstate Ambulance in Progress menu", confirmed: false },
-      { name: "Airboat 09", category: "Vehicles", seq: [], unlock: "Complete 5 survival challenges", confirmed: false },
-      { name: "Bravado Banshee", category: "Vehicles", seq: [], unlock: "Complete all combat challenges", confirmed: false },
-      { name: "Tuff BMX", category: "Vehicles", seq: [], unlock: "Complete 5 fitness challenges", confirmed: false },
-      { name: "Nagasaki Carbon RS", category: "Vehicles", seq: [], unlock: "Complete all exploration challenges", confirmed: false },
-      { name: "'65 Vapid Dominator", category: "Vehicles", seq: [], unlock: "Complete all fitness challenges", confirmed: false },
-      { name: "Progen Emerus", category: "Vehicles", seq: [], unlock: "Complete all vehicle challenges", confirmed: false },
-      { name: "Inflatable Flamingo", category: "Vehicles", seq: [], unlock: "Destroy 50 cocaine flamingos", confirmed: false },
-      { name: "Vapid Stanier G2 Taxi", category: "Vehicles", seq: [], unlock: "Complete 5 sports challenges", confirmed: false },
-      { name: "Hauners P-996 Lazer", category: "Vehicles", seq: [], unlock: "Complete all challenges", confirmed: false },
-      { name: "Lapwing Mallard", category: "Vehicles", seq: [], unlock: "Complete 5 vehicle challenges", confirmed: false },
-      { name: "Brimstone Golfer", category: "Vehicles", seq: [], unlock: "Complete all sports challenges", confirmed: false },
-      { name: "Hauners Rhino Tank", category: "Vehicles", seq: [], unlock: "Complete all survival challenges", confirmed: false },
-      { name: "Maibatsu Sanchez", category: "Vehicles", seq: [], unlock: "Complete 5 criminal challenges", confirmed: false },
-      { name: "Nagasaki Sea Sparrow", category: "Vehicles", seq: [], unlock: "Complete 5 exploration challenges", confirmed: false },
-      { name: "Speeder 700 GT", category: "Vehicles", seq: [], unlock: "Complete 5 combat challenges", confirmed: false },
-      { name: "Truffade Thrax", category: "Vehicles", seq: [], unlock: "Complete all shopping challenges", confirmed: false },
-      { name: "Western Zombie Bobber", category: "Vehicles", seq: [], unlock: "Complete all criminal challenges", confirmed: false },
+      { name: "Maibatsu Boomazoom", category: "Vehicles", desc: "Spawns vehicle • Unlock: 5 shopping challenges", seq: ["←","↑","→","↓","←","←","↑","←"] },
+      { name: "MTL Pumper", category: "Vehicles", desc: "Spawns fire truck • Unlock: Discover in Progress menu", seq: ["←","↑","→","↓","←","→","→","↑"] },
+      { name: "HVY Bulldozer", category: "Vehicles", desc: "Spawns bulldozer • Unlock: Discover in Progress menu", seq: ["←","↑","→","↓","←","→","→","↓"] },
 
-      // Environment Cheats (3 total)
-      { name: "Cycle Weather", category: "Environment", seq: ["↓","→","↑","↓","→","↑","→"], unlock: "Complete main story", confirmed: true },
-      { name: "Move Time Forward", category: "Environment", seq: [], unlock: "Collect 10 watches", confirmed: false },
-      { name: "Pause Time of Day", category: "Environment", seq: [], unlock: "Collect 20 watches", confirmed: false },
+      { name: "Cycle Weather", category: "Environment", desc: "Changes weather • Unlock: Complete main story", seq: ["↓","→","↑","↓","→","↑","→"] },
 
-      // Screen Filter Cheats (16 total)
-      { name: "Cataclysm", category: "Filters", seq: ["↓","↓","↑","→","→","↑","←","←","→","→"], unlock: "Discover Martha's Vamos in Progress menu", confirmed: true },
-      { name: "Dollhouse", category: "Filters", seq: ["↓","↓","↑","→","→","↑","←","←","↓","→"], unlock: "Spend 8 hours with your partner", confirmed: true },
-      { name: "Faded Glory", category: "Filters", seq: ["↓","↓","↑","→","→","↑","←","←","←","→"], unlock: "Rob 50 stores with your partner", confirmed: true },
-      { name: "Golden Hour", category: "Filters", seq: [], unlock: "Spend 4 hours holding hands", confirmed: false },
-      { name: "Powdered Sugar", category: "Filters", seq: [], unlock: "Scan all space debris with WAiNK", confirmed: false },
-      { name: "Pinhole", category: "Filters", seq: [], unlock: "Clear 25 gang operations with partner", confirmed: false },
-      { name: "Neon Jungle", category: "Filters", seq: [], unlock: "Discover all 16 Girlypop Vehicles", confirmed: false },
-      { name: "Yesteryear", category: "Filters", seq: [], unlock: "Discover the Ridgway", confirmed: false },
-      { name: "Videotape", category: "Filters", seq: [], unlock: "Complete 50 activities with partner", confirmed: false },
-      { name: "Dark Mirror", category: "Filters", seq: [], unlock: "Earn $500,000 from vehicle sales", confirmed: false },
-      { name: "Migraine", category: "Filters", seq: [], unlock: "Survive 6 minutes with 6-star wanted level", confirmed: false },
-      { name: "Bubblegum", category: "Filters", seq: [], unlock: "Find all 24 Vice City Flamingos cards", confirmed: false },
-      { name: "Fast Forward", category: "Filters", seq: [], unlock: "Complete 50 meditations", confirmed: false },
-      { name: "Fisheye", category: "Filters", seq: [], unlock: "Catch 100 fish", confirmed: false },
-      { name: "Pixel Art", category: "Filters", seq: [], unlock: "Earn $250,000 selling collectibles", confirmed: false },
-      { name: "Hellscape", category: "Filters", seq: [], unlock: "Steal 100 cop vehicles", confirmed: false }
+      { name: "Cataclysm", category: "Filters", desc: "Screen filter • Unlock: Discover Martha's Vamos", seq: ["↓","↓","↑","→","→","↑","←","←","→","→"] },
+      { name: "Dollhouse", category: "Filters", desc: "Screen filter • Unlock: 8 hrs with partner", seq: ["↓","↓","↑","→","→","↑","←","←","↓","→"] },
+      { name: "Faded Glory", category: "Filters", desc: "Screen filter • Unlock: Rob 50 stores with partner", seq: ["↓","↓","↑","→","→","↑","←","←","←","→"] }
     ];
 
-    const CATEGORIES = ["All", "Player", "Combat", "Vehicles", "Environment", "Filters"];
-    let state = {
-      category: "All",
-      scope: "confirmed",
-      platform: "PS5",
-      query: ""
-    };
+    const CATS = ["All", "Player", "Combat", "Vehicles", "Environment", "Filters"];
+    let platform = "PS5";
+    let category = "All";
+    let query = "";
 
-    const cheatGrid = document.getElementById("cheatGrid");
-    const categoryTabs = document.getElementById("categoryTabs");
-    const searchInput = document.getElementById("searchInput");
-    const confirmedCountPill = document.getElementById("confirmedCountPill");
+    const grid = document.getElementById("grid");
+    const catBar = document.getElementById("catBar");
+    const searchBox = document.getElementById("searchBox");
+    const totalBadge = document.getElementById("totalBadge");
+    const toast = document.getElementById("toast");
 
-    const confirmedTotal = CHEATS.filter(c => c.confirmed).length;
-    confirmedCountPill.textContent = `${confirmedTotal} Confirmed Codes`;
+    totalBadge.textContent = `${CHEATS.length} Confirmed Codes`;
 
-    function renderTabs() {
-      categoryTabs.innerHTML = "";
-      CATEGORIES.forEach(cat => {
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    function renderCats() {
+      catBar.innerHTML = "";
+      CATS.forEach(c => {
         const btn = document.createElement("button");
         btn.type = "button";
-        btn.className = "tab-btn" + (state.category === cat ? " active" : "");
-        const count = CHEATS.filter(c => {
-          const scopeOk = state.scope === "all" ? true : c.confirmed;
-          const catOk = cat === "All" ? true : c.category === cat;
-          return scopeOk && catOk;
-        }).length;
-        btn.textContent = `${cat} (${count})`;
+        btn.className = "cat-btn" + (category === c ? " active" : "");
+        const count = c === "All" ? CHEATS.length : CHEATS.filter(item => item.category === c).length;
+        btn.textContent = `${c} (${count})`;
         btn.addEventListener("click", () => {
-          state.category = cat;
-          renderTabs();
-          renderGrid();
+          category = c;
+          renderCats();
+          renderCheats();
         });
-        categoryTabs.appendChild(btn);
+        catBar.appendChild(btn);
       });
     }
 
-    function renderGrid() {
-      const q = state.query.trim().toLowerCase();
-      const filtered = CHEATS.filter(c => {
-        const scopeOk = state.scope === "all" ? true : c.confirmed;
-        const catOk = state.category === "All" ? true : c.category === state.category;
-        const searchOk = !q ||
-          c.name.toLowerCase().includes(q) ||
-          c.category.toLowerCase().includes(q) ||
-          c.unlock.toLowerCase().includes(q);
-        return scopeOk && catOk && searchOk;
+    function renderCheats() {
+      const q = query.trim().toLowerCase();
+      const list = CHEATS.filter(item => {
+        const matchCat = category === "All" || item.category === category;
+        const matchQ = !q ||
+          item.name.toLowerCase().includes(q) ||
+          item.category.toLowerCase().includes(q) ||
+          item.desc.toLowerCase().includes(q);
+        return matchCat && matchQ;
       });
 
-      if (!filtered.length) {
-        cheatGrid.innerHTML = `<div class="panel"><p style="margin:0;">No cheats match your current filter or search.</p></div>`;
+      if (!list.length) {
+        grid.innerHTML = `<div class="section-box"><p style="margin:0;">No cheat codes matched your search.</p></div>`;
         return;
       }
 
-      cheatGrid.innerHTML = filtered.map(c => {
-        const badge = c.confirmed
-          ? `<span class="badge-ok">Confirmed</span>`
-          : `<span class="badge-pending">Code Pending</span>`;
+      const modText = platform === "PS5" ? "Hold L1 + R1" : "Hold LB + RB";
 
-        const keysHtml = c.confirmed && c.seq.length
-          ? c.seq.map(k => `<span class="keycap">${k}</span>`).join("")
-          : `<span class="pending-text">Sequence not yet confirmed — Unlock: ${c.unlock}</span>`;
-
+      grid.innerHTML = list.map((item, idx) => {
+        const seqText = `${modText}: ${item.seq.join(" ")}`;
         return `
           <article class="card">
             <div>
-              <div class="card-top">
-                <h3 class="cheat-title">${c.name}</h3>
-                ${badge}
+              <div class="card-head">
+                <h3 class="card-title">${item.name}</h3>
+                <span class="cat-pill">${item.category}</span>
               </div>
-              <div class="meta-line">${c.category} • Unlock: ${c.unlock}</div>
+              <p class="card-desc">${item.desc}</p>
             </div>
-            <div class="seq-box" aria-label="${state.platform} D-pad code">${keysHtml}</div>
+            <div class="keys" aria-label="${platform} sequence">
+              ${item.seq.map(k => `<span class="key">${k}</span>`).join("")}
+            </div>
+            <div class="card-foot">
+              <span>${platform} • ${modText}</span>
+              <button class="copy-btn" type="button" data-copy="${seqText.replace(/"/g, "&quot;")}" data-idx="${idx}">Copy Sequence</button>
+            </div>
           </article>
         `;
       }).join("");
+
+      grid.querySelectorAll(".copy-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const text = btn.getAttribute("data-copy");
+          navigator.clipboard?.writeText(text).catch(() => {});
+          showToast(`Copied: ${text}`);
+        });
+      });
     }
 
-    document.querySelectorAll(".plat-btn").forEach(btn => {
+    document.querySelectorAll(".seg-btn[data-plat]").forEach(btn => {
       btn.addEventListener("click", () => {
-        state.platform = btn.dataset.plat;
-        document.querySelectorAll(".plat-btn").forEach(b => b.classList.remove("active"));
+        platform = btn.dataset.plat;
+        document.querySelectorAll(".seg-btn[data-plat]").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
-        renderGrid();
+        renderCheats();
       });
     });
 
-    document.querySelectorAll(".scope-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        state.scope = btn.dataset.scope;
-        document.querySelectorAll(".scope-btn").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        renderTabs();
-        renderGrid();
-      });
+    const standardViewBtn = document.getElementById("standardViewBtn");
+    const couchViewBtn = document.getElementById("couchViewBtn");
+
+    standardViewBtn.addEventListener("click", () => {
+      grid.classList.remove("couch");
+      standardViewBtn.classList.add("active");
+      couchViewBtn.classList.remove("active");
     });
 
-    searchInput.addEventListener("input", () => {
-      state.query = searchInput.value;
-      renderGrid();
+    couchViewBtn.addEventListener("click", () => {
+      grid.classList.add("couch");
+      couchViewBtn.classList.add("active");
+      standardViewBtn.classList.remove("active");
     });
 
-    // Support modal with 5s timer
+    searchBox.addEventListener("input", () => {
+      query = searchBox.value;
+      renderCheats();
+    });
+
+    // Support modal with 5-second unlock countdown
     const supportModal = document.getElementById("supportModal");
-    const openSupportBtn = document.getElementById("openSupportBtn");
-    const closeSupportBtn = document.getElementById("closeSupportBtn");
-    const countdownNum = document.getElementById("countdownNum");
-    const supportStatusText = document.getElementById("supportStatusText");
-    const supportContent = document.getElementById("supportContent");
-    let timerId = null;
+    const openSupport = document.getElementById("openSupport");
+    const closeSupport = document.getElementById("closeSupport");
+    const modalMsg = document.getElementById("modalMsg");
+    const qrPanel = document.getElementById("qrPanel");
+    let intervalHandle = null;
 
-    function openSupport() {
-      clearInterval(timerId);
-      let left = 5;
-      countdownNum.textContent = left;
-      supportStatusText.innerHTML = `Unlocking support option in <strong id="countdownNum">${left}</strong>s...`;
-      supportContent.style.display = "none";
+    function openModal() {
+      clearInterval(intervalHandle);
+      let secs = 5;
+      qrPanel.style.display = "none";
+      modalMsg.innerHTML = `Preparing support QR in <strong id="timerSec">${secs}</strong>s...`;
       supportModal.classList.add("open");
       supportModal.setAttribute("aria-hidden", "false");
 
-      timerId = setInterval(() => {
-        left -= 1;
-        const el = document.getElementById("countdownNum");
-        if (left > 0) {
-          if (el) el.textContent = left;
+      intervalHandle = setInterval(() => {
+        secs -= 1;
+        const secEl = document.getElementById("timerSec");
+        if (secs > 0) {
+          if (secEl) secEl.textContent = secs;
         } else {
-          clearInterval(timerId);
-          supportStatusText.textContent = "Scan the QR code below to support the creator:";
-          supportContent.style.display = "block";
+          clearInterval(intervalHandle);
+          modalMsg.textContent = "Scan the QR code below to buy the creator a coffee:";
+          qrPanel.style.display = "block";
         }
       }, 1000);
     }
 
-    function closeSupport() {
-      clearInterval(timerId);
+    function closeModal() {
+      clearInterval(intervalHandle);
       supportModal.classList.remove("open");
       supportModal.setAttribute("aria-hidden", "true");
     }
 
-    openSupportBtn.addEventListener("click", openSupport);
-    closeSupportBtn.addEventListener("click", closeSupport);
+    openSupport.addEventListener("click", openModal);
+    closeSupport.addEventListener("click", closeModal);
     supportModal.addEventListener("click", e => {
-      if (e.target === supportModal) closeSupport();
+      if (e.target === supportModal) closeModal();
     });
 
-    renderTabs();
-    renderGrid();
+    renderCats();
+    renderCheats();
   </script>
 </body>
 </html>
