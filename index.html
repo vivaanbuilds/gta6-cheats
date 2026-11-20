@@ -330,11 +330,10 @@
       border-bottom: 2px solid #090a0d;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 800;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: #e5e7eb;
     }
 
-    /* Colored PlayStation / Xbox face button styles */
     .sym-tri { color: #22c55e; font-weight: 900; }
     .sym-x   { color: #60a5fa; font-weight: 900; }
     .sym-cir { color: #f87171; font-weight: 900; }
@@ -359,7 +358,7 @@
       justify-content: flex-end;
     }
 
-    .code-pill {
+    .phone-pill {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.78rem;
       color: #d1d5db;
@@ -742,7 +741,7 @@
       <div class="hero-content">
         <div class="live-pill">● PS5 • PS5 Pro • Xbox Series X|S</div>
         <h1>GTA 6 Cheat Codes &amp; Sequences</h1>
-        <p>Controller button sequences, phone/cheat codes, unlock challenges, and console tips for PlayStation 5, PS5 Pro, and Xbox Series X|S.</p>
+        <p>Controller button sequences, phone codes, unlock challenges, and console tips for PlayStation 5, PS5 Pro, and Xbox Series X|S.</p>
         <div class="hero-meta">
           <div class="countdown-bar">
             <span>Status:</span>
@@ -750,7 +749,7 @@
           </div>
           <div class="countdown-bar">
             <span>Tracked:</span>
-            <strong id="cheatCountLabel">24 Cheats</strong>
+            <strong id="cheatCountLabel">25 Cheats</strong>
           </div>
         </div>
       </div>
@@ -797,7 +796,7 @@
 
       <div class="editorial-card">
         <h2>Confirmed vs. Unconfirmed</h2>
-        <p>Entries marked <strong>Confirmed</strong> show verified sequences or codes; entries still being verified or decoded are clearly labeled as <strong>Unconfirmed</strong>.</p>
+        <p>Entries marked <strong>Confirmed</strong> appear first at the top of the list; entries still being verified or decoded appear below marked as <strong>Unconfirmed</strong>.</p>
       </div>
     </section>
   </div>
@@ -976,100 +975,14 @@
     setInterval(tick, 1000);
     tick();
 
-    // Token types:
-    // Arrows: RIGHT, LEFT, UP, DOWN
-    // Face buttons: TRI, X, CIR, SQR (mapped cleanly to Y, A, B, X on Xbox)
-    // Shoulders: R1, R2, L1, L2 (mapped to RB, RT, LB, LT on Xbox)
     const cheats = [
-      // Combat & Melee
-      {
-        title: "Explosive Melee Attacks",
-        cat: "Combat & Melee",
-        confirmed: false,
-        desc: "Punches and melee strikes trigger explosions on impact.",
-        code: "1-999-4684-2637",
-        seq: ["RIGHT","LEFT","X","TRI","R1","CIR","CIR","CIR","L2"]
-      },
-      {
-        title: "Give Weapons & Ammo",
-        cat: "Combat & Melee",
-        confirmed: false,
-        desc: "Unlocks a full arsenal of melee and ranged weapons.",
-        code: "1-999-866-587",
-        seq: ["TRI","R2","LEFT","X","RIGHT","TRI","DOWN","SQR","L1","L1","L1"]
-      },
-      {
-        title: "Explosive Bullets (Bang Bang)",
-        cat: "Combat & Melee",
-        confirmed: false,
-        desc: "Fired bullets detonate on impact.",
-        code: "1-999-444-439",
-        seq: ["RIGHT","SQR","X","LEFT","R1","R2","LEFT","RIGHT","RIGHT","L1","L1","L1"]
-      },
-      {
-        title: "Flaming Bullets",
-        cat: "Combat & Melee",
-        confirmed: false,
-        desc: "Bullets set enemies and vehicles on fire.",
-        code: "1-999-462-363-4279",
-        seq: ["L1","R1","SQR","R1","LEFT","R2","R1","LEFT","SQR","RIGHT","L1","L1"]
-      },
-      {
-        title: "Max Ammo",
-        cat: "Combat & Melee",
-        confirmed: true,
-        desc: "Unlock: Win bronze medals or better at shooting ranges.",
-        code: "UNLOCK-AMMO-01",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","UP","DOWN","LEFT"]
-      },
-      {
-        title: "Infinite Ammo",
-        cat: "Combat & Melee",
-        confirmed: true,
-        desc: "Unlock: Win 25 silver medals or better at shooting ranges.",
-        code: "UNLOCK-AMMO-02",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","DOWN"]
-      },
-      {
-        title: "No Reload",
-        cat: "Combat & Melee",
-        confirmed: true,
-        desc: "Unlock: Win 25 gold medals at shooting ranges.",
-        code: "UNLOCK-AMMO-03",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","UP"]
-      },
-      {
-        title: "Attack Force",
-        cat: "Combat & Melee",
-        confirmed: true,
-        desc: "Unlock: Finish the main story (or 100 melee takedowns).",
-        code: "MELEE-FORCE-04",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","DOWN"]
-      },
-
-      // Player & Health
-      {
-        title: "Slow Motion Aim",
-        cat: "Player & Health",
-        confirmed: false,
-        desc: "Slows time while aiming (enter up to 3x).",
-        code: "1-999-332-3393",
-        seq: ["SQR","L2","R1","TRI","LEFT","SQR","L2","RIGHT","X"]
-      },
-      {
-        title: "Invincibility (God Mode)",
-        cat: "Player & Health",
-        confirmed: false,
-        desc: "Full immunity to all damage for 5 minutes.",
-        code: "1-999-724-654-5537",
-        seq: ["RIGHT","X","RIGHT","LEFT","RIGHT","R1","RIGHT","LEFT","X","TRI"]
-      },
+      // Confirmed first
       {
         title: "$250,000 Cash",
         cat: "Player & Health",
         confirmed: true,
         desc: "Unlock: Finish the main story (or earn $250,000 from fenced goods).",
-        code: "CASH-250K-01",
+        phone: "",
         seq: ["UP","RIGHT","DOWN","LEFT","UP","LEFT","DOWN","RIGHT"]
       },
       {
@@ -1077,33 +990,15 @@
         cat: "Player & Health",
         confirmed: true,
         desc: "Unlock: Spend $2,500 on alcohol.",
-        code: "DRUNK-MODE-02",
+        phone: "",
         seq: ["UP","LEFT","RIGHT","UP","UP","LEFT","RIGHT","UP","LEFT","RIGHT"]
       },
-      {
-        title: "Unlimited Focus",
-        cat: "Player & Health",
-        confirmed: true,
-        desc: "Unlock: Finish the main story.",
-        code: "FOCUS-MAX-03",
-        seq: ["DOWN","UP","UP","DOWN","UP","DOWN","UP","DOWN","UP","RIGHT"]
-      },
-      {
-        title: "Body Armor",
-        cat: "Player & Health",
-        confirmed: true,
-        desc: "Unlock: Complete 100 workouts.",
-        code: "ARMOR-FULL-04",
-        seq: ["DOWN","UP","LEFT","UP","UP","UP","UP","UP","DOWN","DOWN"]
-      },
-
-      // Wanted Level
       {
         title: "Raise Heat Level",
         cat: "Wanted Level",
         confirmed: true,
         desc: "Unlock: Lose a 3-star wanted level 25 times.",
-        code: "HEAT-UP-25",
+        phone: "",
         seq: ["LEFT","DOWN","RIGHT","DOWN","UP","DOWN","UP"]
       },
       {
@@ -1111,25 +1006,79 @@
         cat: "Wanted Level",
         confirmed: true,
         desc: "Unlock: Lose a 3-star wanted level 50 times.",
-        code: "WANTED-UP-50",
+        phone: "",
         seq: ["LEFT","DOWN","RIGHT","DOWN","UP","RIGHT","UP"]
       },
       {
-        title: "Lower Wanted Level",
-        cat: "Wanted Level",
-        confirmed: false,
-        desc: "Reduces active wanted level when unlocked in playthrough.",
-        code: "PENDING-WL-03",
-        seq: []
+        title: "Unlimited Focus",
+        cat: "Player & Health",
+        confirmed: true,
+        desc: "Unlock: Finish the main story.",
+        phone: "",
+        seq: ["DOWN","UP","UP","DOWN","UP","DOWN","UP","DOWN","UP","RIGHT"]
       },
-
-      // Vehicles
+      {
+        title: "Body Armor",
+        cat: "Player & Health",
+        confirmed: true,
+        desc: "Unlock: Complete 100 workouts.",
+        phone: "",
+        seq: ["DOWN","UP","LEFT","UP","UP","UP","UP","UP","DOWN","DOWN"]
+      },
+      {
+        title: "Max Ammo",
+        cat: "Combat & Melee",
+        confirmed: true,
+        desc: "Unlock: Win bronze medals or better at shooting ranges.",
+        phone: "",
+        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","UP","DOWN","LEFT"]
+      },
+      {
+        title: "Infinite Ammo",
+        cat: "Combat & Melee",
+        confirmed: true,
+        desc: "Unlock: Win 25 silver medals or better at shooting ranges.",
+        phone: "",
+        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","DOWN"]
+      },
+      {
+        title: "No Reload",
+        cat: "Combat & Melee",
+        confirmed: true,
+        desc: "Unlock: Win 25 gold medals at shooting ranges.",
+        phone: "",
+        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","UP"]
+      },
+      {
+        title: "Attack Force",
+        cat: "Combat & Melee",
+        confirmed: true,
+        desc: "Unlock: Finish the main story (or 100 melee takedowns).",
+        phone: "",
+        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","DOWN"]
+      },
+      {
+        title: "Exploding Balls",
+        cat: "Combat & Melee",
+        confirmed: true,
+        desc: "Unlock: Hit 20 enemies with explosive damage.",
+        phone: "",
+        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","RIGHT"]
+      },
+      {
+        title: "Vehicle Force",
+        cat: "Vehicles",
+        confirmed: true,
+        desc: "Unlock: Kill 25 enemies with a vehicle.",
+        phone: "",
+        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","LEFT","UP","DOWN"]
+      },
       {
         title: "Maibatsu Boomazoom",
         cat: "Vehicles",
         confirmed: true,
         desc: "Unlock: Complete 5 shopping challenges.",
-        code: "VEH-BOOM-01",
+        phone: "",
         seq: ["LEFT","UP","RIGHT","DOWN","LEFT","LEFT","UP","LEFT"]
       },
       {
@@ -1137,7 +1086,7 @@
         cat: "Vehicles",
         confirmed: true,
         desc: "Unlock: Discover the MTL Pumper in the Progress menu.",
-        code: "VEH-MTL-02",
+        phone: "",
         seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","UP"]
       },
       {
@@ -1145,25 +1094,15 @@
         cat: "Vehicles",
         confirmed: true,
         desc: "Unlock: Discover the HVY Bulldozer in the Progress menu.",
-        code: "VEH-HVY-03",
+        phone: "",
         seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","DOWN"]
       },
-      {
-        title: "Vehicle Force",
-        cat: "Vehicles",
-        confirmed: true,
-        desc: "Unlock: Kill 25 enemies with a vehicle.",
-        code: "VEH-FORCE-04",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","LEFT","UP","DOWN"]
-      },
-
-      // World & Weather
       {
         title: "Cycle Weather",
         cat: "World & Weather",
         confirmed: true,
         desc: "Unlock: Finish the main story / reveal the map.",
-        code: "WEATHER-CYC-01",
+        phone: "",
         seq: ["DOWN","RIGHT","UP","DOWN","RIGHT","UP","RIGHT"]
       },
       {
@@ -1171,7 +1110,7 @@
         cat: "World & Weather",
         confirmed: true,
         desc: "Unlock: Discover Martha's Vamos in the Progress menu.",
-        code: "FLT-CATACLYSM",
+        phone: "",
         seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","RIGHT","RIGHT"]
       },
       {
@@ -1179,7 +1118,7 @@
         cat: "World & Weather",
         confirmed: true,
         desc: "Unlock: Spend 8 hours with your partner.",
-        code: "FLT-DOLLHOUSE",
+        phone: "",
         seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","DOWN","RIGHT"]
       },
       {
@@ -1187,10 +1126,60 @@
         cat: "World & Weather",
         confirmed: true,
         desc: "Unlock: Rob 50 stores with your partner.",
-        code: "FLT-FADEDGLORY",
+        phone: "",
         seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","LEFT","RIGHT"]
+      },
+
+      // Unconfirmed below
+      {
+        title: "Explosive Melee Attacks",
+        cat: "Combat & Melee",
+        confirmed: false,
+        desc: "Punches and melee strikes trigger explosions on impact.",
+        phone: "1-999-4684-2637",
+        seq: ["RIGHT","LEFT","X","TRI","R1","CIR","CIR","CIR","L2"]
+      },
+      {
+        title: "Give Weapons & Ammo",
+        cat: "Combat & Melee",
+        confirmed: false,
+        desc: "Unlocks a full arsenal of melee and ranged weapons.",
+        phone: "1-999-866-587",
+        seq: ["TRI","R2","LEFT","X","RIGHT","TRI","DOWN","SQR","L1","L1","L1"]
+      },
+      {
+        title: "Explosive Bullets (Bang Bang)",
+        cat: "Combat & Melee",
+        confirmed: false,
+        desc: "Fired bullets detonate on impact.",
+        phone: "1-999-444-439",
+        seq: ["RIGHT","SQR","X","LEFT","R1","R2","LEFT","RIGHT","RIGHT","L1","L1","L1"]
+      },
+      {
+        title: "Flaming Bullets",
+        cat: "Combat & Melee",
+        confirmed: false,
+        desc: "Bullets set enemies and vehicles on fire.",
+        phone: "1-999-462-363-4279",
+        seq: ["L1","R1","SQR","R1","LEFT","R2","R1","LEFT","SQR","RIGHT","L1","L1"]
+      },
+      {
+        title: "Slow Motion Aim",
+        cat: "Player & Health",
+        confirmed: false,
+        desc: "Slows time while aiming (enter up to 3x).",
+        phone: "1-999-332-3393",
+        seq: ["SQR","L2","R1","TRI","LEFT","SQR","L2","RIGHT","X"]
+      },
+      {
+        title: "Invincibility (God Mode)",
+        cat: "Player & Health",
+        confirmed: false,
+        desc: "Full immunity to all damage for 5 minutes.",
+        phone: "1-999-724-654-5537",
+        seq: ["RIGHT","X","RIGHT","LEFT","RIGHT","R1","RIGHT","LEFT","X","TRI"]
       }
-    ];
+    ].sort((a, b) => Number(b.confirmed) - Number(a.confirmed));
 
     document.getElementById("cheatCountLabel").textContent = `${cheats.length} Cheats`;
 
@@ -1288,13 +1277,11 @@
       const platLabel = plat === "ps5" ? "PS5 / PS5 Pro Input" : "Xbox Series X|S Input";
       document.getElementById("cTitle").textContent = c.title;
       document.getElementById("cPlat").textContent = platLabel;
-      if (c.seq && c.seq.length) {
-        document.getElementById("cKeys").innerHTML = c.seq.map(keyIcon).join("");
-        document.getElementById("cPhone").textContent = `${c.code}  •  ${formatSeqText(c.seq)}`;
-      } else {
-        document.getElementById("cKeys").innerHTML = `<span class="pending-seq">Sequence unconfirmed</span>`;
-        document.getElementById("cPhone").textContent = `${c.code}  •  ${c.desc}`;
-      }
+      document.getElementById("cKeys").innerHTML = (c.seq && c.seq.length)
+        ? c.seq.map(keyIcon).join("")
+        : `<span class="pending-seq">Sequence unconfirmed</span>`;
+      const extra = c.phone ? `${c.phone}  •  ` : "";
+      document.getElementById("cPhone").textContent = `${extra}${formatSeqText(c.seq)}`;
       document.getElementById("couchModal").classList.add("open");
     }
 
@@ -1309,8 +1296,9 @@
         .filter(c => (cat === "All Codes" || c.cat === cat) && (
           c.title.toLowerCase().includes(q) ||
           c.desc.toLowerCase().includes(q) ||
-          c.code.toLowerCase().includes(q)
-        ));
+          (c.phone && c.phone.toLowerCase().includes(q))
+        ))
+        .sort((a, b) => Number(b.confirmed) - Number(a.confirmed));
 
       if (filtered.length === 0) {
         listEl.innerHTML = `<div style="padding:20px; text-align:center; color:var(--muted);">No matching cheat codes found.</div>`;
@@ -1326,7 +1314,13 @@
           ? c.seq.map(keyIcon).join("")
           : `<span class="pending-seq">Sequence unconfirmed</span>`;
 
-        const copyPayload = `${c.title} (${c.code}) — ${c.seq && c.seq.length ? formatSeqText(c.seq) : c.desc}`;
+        const phoneHtml = c.phone
+          ? `<span class="phone-pill">${c.phone}</span>`
+          : "";
+
+        const copyPayload = c.phone
+          ? `${c.title} (${c.phone}) — ${formatSeqText(c.seq)}`
+          : `${c.title} — ${formatSeqText(c.seq)}`;
 
         return `
           <div class="cheat-row">
@@ -1336,8 +1330,8 @@
             </div>
             <div class="keys">${keysHtml}</div>
             <div class="row-right">
-              <span class="code-pill">${c.code}</span>
-              <button class="btn-sm" onclick="copySeq(this, '${copyPayload.replace(/'/g, "\\'")}')" title="Copy code & sequence">📋</button>
+              ${phoneHtml}
+              <button class="btn-sm" onclick="copySeq(this, '${copyPayload.replace(/'/g, "\\'")}')" title="Copy">📋</button>
               <button class="btn-sm" onclick="openCouch(${c.idx})" title="Couch Mode">📺</button>
             </div>
           </div>
