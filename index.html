@@ -313,10 +313,18 @@
       margin-top: 2px;
     }
 
+    .hold-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--secondary);
+      margin-top: 4px;
+    }
+
     .keys {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+      align-items: center;
     }
 
     .k {
@@ -334,6 +342,12 @@
       font-weight: 800;
       font-size: 0.78rem;
       box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .pending-seq {
+      font-size: 0.78rem;
+      color: var(--dim);
+      font-style: italic;
     }
 
     .row-actions {
@@ -359,7 +373,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
 
     .editorial-card {
@@ -705,6 +719,7 @@
         <a href="#list">All Cheats</a>
         <a href="#community">Info</a>
         <a href="#guide">How to Enter</a>
+        <a href="#more-info">More</a>
         <a href="#" onclick="openSupportModal(); return false;" style="color: var(--primary); font-weight: 700;">Support</a>
       </div>
     </div>
@@ -715,7 +730,7 @@
       <div class="hero-content">
         <div class="live-pill">● PS5 • PS5 Pro • Xbox Series X|S</div>
         <h1>GTA 6 Cheat Codes Hub</h1>
-        <p>Confirmed D-pad cheat sequences, unlock requirements, and console input guides for PlayStation 5 and Xbox Series X|S.</p>
+        <p>Confirmed D-pad cheat sequences, unlock requirements, and console input guides for PS5, PS5 Pro, and Xbox Series X|S.</p>
         <div class="countdown-bar">
           <span>Release Status:</span>
           <strong id="timer">LIVE NOW</strong>
@@ -730,20 +745,14 @@
     <div class="ad-box">Advertisement — Responsive Display Banner (Google AdSense)</div>
 
     <div id="list" class="controls">
-      <input type="text" id="search" placeholder="Search cheat (e.g. $250,000, Max Ammo, Infinite Ammo, Weather, Boomazoom)..." />
+      <input type="text" id="search" placeholder="Search cheat (e.g. $250,000, Drunk, Wanted Level, Max Ammo, Boomazoom)..." />
       <div class="plat-group">
         <button class="plat-btn active ps5" id="btnPs5" onclick="setPlat('ps5')">PS5 / PS5 Pro</button>
         <button class="plat-btn xbox" id="btnXbox" onclick="setPlat('xbox')">Xbox Series X|S</button>
       </div>
     </div>
 
-    <div class="tabs">
-      <button class="tab active" data-cat="All">All Codes (17)</button>
-      <button class="tab" data-cat="Combat">Combat & Ammo</button>
-      <button class="tab" data-cat="Player">Player & Health</button>
-      <button class="tab" data-cat="Vehicles">Vehicles</button>
-      <button class="tab" data-cat="World">World & Filters</button>
-    </div>
+    <div class="tabs" id="catTabs"></div>
 
     <div class="cheat-table" id="cheatList"></div>
 
@@ -760,8 +769,8 @@
         <h2>How to Enter Codes on Console</h2>
         <ul>
           <li><strong>Unlock First:</strong> Finish the main story and complete each cheat's unlock requirement to open the Cheats tab under Progress.</li>
-          <li><strong>D-Pad Input:</strong> Open your in-game phone, hold <strong>L1 + R1</strong> on PS5 or <strong>LB + RB</strong> on Xbox, and enter the D-pad sequence.</li>
-          <li><strong>Same Sequences:</strong> Both PS5 and Xbox Series X|S use the same D-pad sequences.</li>
+          <li><strong>D-Pad Input:</strong> Press <strong>D-pad Up</strong> to open your phone, hold <strong>L1 + R1</strong> on PS5 / PS5 Pro or <strong>LB + RB</strong> on Xbox Series X|S, and enter the D-pad arrows.</li>
+          <li><strong>Same Sequences:</strong> PS5, PS5 Pro, and Xbox Series X|S use the same D-pad arrow sequences.</li>
         </ul>
       </div>
     </section>
@@ -774,7 +783,19 @@
 
       <div class="editorial-card">
         <h2>Verification Status</h2>
-        <p>Sequences marked <strong>Confirmed</strong> match documented D-pad inputs; any pending or disputed entries are clearly labeled so you don't waste time.</p>
+        <p>Sequences marked <strong>Confirmed</strong> match documented D-pad inputs; entries still being verified or decoded are clearly labeled as <strong>Unconfirmed</strong>.</p>
+      </div>
+    </section>
+
+    <section id="more-info" class="editorial-grid">
+      <div class="editorial-card">
+        <h2>Couch Mode & Quick Copy</h2>
+        <p>Click <strong>Copy Sequence</strong> on any confirmed cheat to copy the exact button combination for your selected console, or click <strong>📺</strong> for full-screen Couch Mode viewing.</p>
+      </div>
+
+      <div class="editorial-card">
+        <h2>Community & Guide Updates</h2>
+        <p>As new D-pad inputs and challenge details are verified for PS5, PS5 Pro, and Xbox Series X|S, unconfirmed entries on this list are updated accordingly.</p>
       </div>
     </section>
   </div>
@@ -862,7 +883,7 @@
 
   <footer>
     <div>© 2026 GTA 6 Cheat Codes Hub. Unofficial fan guide. Not affiliated with Rockstar Games.</div>
-    <div>PS5 & Xbox Series X|S use the same D-pad sequences.</div>
+    <div>PS5, PS5 Pro & Xbox Series X|S use the same D-pad sequences.</div>
   </footer>
 
   <script>
@@ -954,125 +975,84 @@
     tick();
 
     const cheats = [
-      {
-        title: "$250,000 Cash",
-        cat: "Player",
-        confirmed: true,
-        desc: "Unlock: Finish the main story (or earn $250,000 from fenced goods).",
-        seq: ["UP","RIGHT","DOWN","LEFT","UP","LEFT","DOWN","RIGHT"]
-      },
-      {
-        title: "Unlimited Focus",
-        cat: "Player",
-        confirmed: true,
-        desc: "Unlock: Finish the main story.",
-        seq: ["DOWN","UP","UP","DOWN","UP","DOWN","UP","DOWN","UP","RIGHT"]
-      },
-      {
-        title: "Body Armor",
-        cat: "Player",
-        confirmed: true,
-        desc: "Unlock: Complete 100 workouts.",
-        seq: ["DOWN","UP","LEFT","UP","UP","UP","UP","UP","DOWN","DOWN"]
-      },
-      {
-        title: "Raise Heat Level",
-        cat: "Player",
-        confirmed: true,
-        desc: "Unlock: Lose a 3-star wanted level 25 times.",
-        seq: ["LEFT","DOWN","RIGHT","DOWN","UP","DOWN","UP"]
-      },
-      {
-        title: "Max Ammo",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Win bronze medals or better at shooting ranges.",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","UP","DOWN","LEFT"]
-      },
-      {
-        title: "Infinite Ammo",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Win 25 silver medals or better at shooting ranges.",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","DOWN"]
-      },
-      {
-        title: "No Reload",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Win 25 gold medals at shooting ranges.",
-        seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","UP"]
-      },
-      {
-        title: "Attack Force",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Finish the main story (or 100 melee takedowns).",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","DOWN"]
-      },
-      {
-        title: "Exploding Balls",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Hit 20 enemies with explosive damage.",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","RIGHT"]
-      },
-      {
-        title: "Vehicle Force",
-        cat: "Combat",
-        confirmed: true,
-        desc: "Unlock: Kill 25 enemies with a vehicle.",
-        seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","LEFT","UP","DOWN"]
-      },
-      {
-        title: "Maibatsu Boomazoom",
-        cat: "Vehicles",
-        confirmed: true,
-        desc: "Unlock: Complete 5 shopping challenges.",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","LEFT","UP","LEFT"]
-      },
-      {
-        title: "MTL Pumper",
-        cat: "Vehicles",
-        confirmed: true,
-        desc: "Unlock: Discover the MTL Pumper in the Progress menu.",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","UP"]
-      },
-      {
-        title: "HVY Bulldozer",
-        cat: "Vehicles",
-        confirmed: true,
-        desc: "Unlock: Discover the HVY Bulldozer in the Progress menu.",
-        seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","DOWN"]
-      },
-      {
-        title: "Cycle Weather",
-        cat: "World",
-        confirmed: true,
-        desc: "Unlock: Finish the main story / reveal the map.",
-        seq: ["DOWN","RIGHT","UP","DOWN","RIGHT","UP","RIGHT"]
-      },
-      {
-        title: "Cataclysm Filter",
-        cat: "World",
-        confirmed: true,
-        desc: "Unlock: Discover Martha's Vamos in the Progress menu.",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","RIGHT","RIGHT"]
-      },
-      {
-        title: "Dollhouse Filter",
-        cat: "World",
-        confirmed: true,
-        desc: "Unlock: Spend 8 hours with your partner.",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","DOWN","RIGHT"]
-      },
-      {
-        title: "Faded Glory Filter",
-        cat: "World",
-        confirmed: true,
-        desc: "Unlock: Rob 50 stores with your partner.",
-        seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","LEFT","RIGHT"]
-      }
+      // Player Cheats (10)
+      { title: "$250,000 Cash", cat: "Player", confirmed: true, desc: "Unlock: Finish the main story (or earn $250,000 from fenced goods).", seq: ["UP","RIGHT","DOWN","LEFT","UP","LEFT","DOWN","RIGHT"] },
+      { title: "Drunk", cat: "Player", confirmed: true, desc: "Unlock: Spend $2,500 on alcohol.", seq: ["UP","LEFT","RIGHT","UP","UP","LEFT","RIGHT","UP","LEFT","RIGHT"] },
+      { title: "Raise Heat Level", cat: "Player", confirmed: true, desc: "Unlock: Lose a 3-star wanted level 25 times.", seq: ["LEFT","DOWN","RIGHT","DOWN","UP","DOWN","UP"] },
+      { title: "Raise Wanted Level", cat: "Player", confirmed: true, desc: "Unlock: Lose a 3-star wanted level 50 times.", seq: ["LEFT","DOWN","RIGHT","DOWN","UP","RIGHT","UP"] },
+      { title: "Unlimited Focus", cat: "Player", confirmed: true, desc: "Unlock: Finish the main story.", seq: ["DOWN","UP","UP","DOWN","UP","DOWN","UP","DOWN","UP","RIGHT"] },
+      { title: "Body Armor", cat: "Player", confirmed: true, desc: "Unlock: Complete 100 workouts.", seq: ["DOWN","UP","LEFT","UP","UP","UP","UP","UP","DOWN","DOWN"] },
+      { title: "No Fall Damage", cat: "Player", confirmed: false, desc: "Unlock: Survive 20 freefalls from 40+ ft.", seq: [] },
+      { title: "Parachute", cat: "Player", confirmed: false, desc: "Unlock: Complete 50 skydives or BASE jumps from 300+ ft.", seq: [] },
+      { title: "Repair Vehicle", cat: "Player", confirmed: false, desc: "Unlock: Win 1st place in 10 races at Gellhorn Raceway, Thrillbilly Mud Club, and Boone Speedway.", seq: [] },
+      { title: "Unlimited Nitrous", cat: "Player", confirmed: false, desc: "Unlock: Land 50 stunt jumps.", seq: [] },
+
+      // Combat Cheats (11)
+      { title: "Max Ammo", cat: "Combat", confirmed: true, desc: "Unlock: Win bronze medals or better at shooting ranges.", seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","UP","DOWN","LEFT"] },
+      { title: "Infinite Ammo", cat: "Combat", confirmed: true, desc: "Unlock: Win 25 silver medals or better at shooting ranges.", seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","DOWN"] },
+      { title: "No Reload", cat: "Combat", confirmed: true, desc: "Unlock: Win 25 gold medals at shooting ranges.", seq: ["DOWN","UP","RIGHT","DOWN","LEFT","LEFT","UP","DOWN","DOWN","UP"] },
+      { title: "Attack Force", cat: "Combat", confirmed: true, desc: "Unlock: Finish the main story (or 100 melee takedowns).", seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","DOWN"] },
+      { title: "Exploding Balls", cat: "Combat", confirmed: true, desc: "Unlock: Hit 20 enemies with explosive damage.", seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","DOWN","UP","RIGHT"] },
+      { title: "Vehicle Force", cat: "Combat", confirmed: true, desc: "Unlock: Kill 25 enemies with a vehicle.", seq: ["DOWN","UP","LEFT","LEFT","RIGHT","DOWN","LEFT","UP","DOWN"] },
+      { title: "All Explosive Weapons", cat: "Combat", confirmed: false, desc: "Unlock: Throw 100 grenades.", seq: [] },
+      { title: "Incendiary Ammo", cat: "Combat", confirmed: false, desc: "Unlock: Set 100 enemies on fire.", seq: [] },
+      { title: "Exploding Bottles", cat: "Combat", confirmed: false, desc: "Unlock: Throw 100 Molotovs.", seq: [] },
+      { title: "Explosive Shotgun", cat: "Combat", confirmed: false, desc: "Unlock: Hit 100 enemies with explosive damage.", seq: [] },
+      { title: "Hauners H-AT", cat: "Combat", confirmed: false, desc: "Unlock: Destroy 100 vehicles with explosions.", seq: [] },
+
+      // Spawn Vehicle Cheats (21)
+      { title: "Maibatsu Boomazoom", cat: "Vehicles", confirmed: true, desc: "Unlock: Complete 5 shopping challenges.", seq: ["LEFT","UP","RIGHT","DOWN","LEFT","LEFT","UP","LEFT"] },
+      { title: "MTL Pumper", cat: "Vehicles", confirmed: true, desc: "Unlock: Discover the MTL Pumper in the Progress menu.", seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","UP"] },
+      { title: "HVY Bulldozer", cat: "Vehicles", confirmed: true, desc: "Unlock: Discover the HVY Bulldozer in the Progress menu.", seq: ["LEFT","UP","RIGHT","DOWN","LEFT","RIGHT","RIGHT","DOWN"] },
+      { title: "Interstate Ambulance", cat: "Vehicles", confirmed: false, desc: "Unlock: Discover the Interstate Ambulance in the Progress menu.", seq: [] },
+      { title: "Airboat 09", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete 5 survival challenges.", seq: [] },
+      { title: "Bravado Banshee", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all combat challenges.", seq: [] },
+      { title: "Tuff BMX", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete 5 fitness challenges.", seq: [] },
+      { title: "Nagasaki Carbon RS", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all exploration challenges.", seq: [] },
+      { title: "'65 Vapid Dominator", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all fitness challenges.", seq: [] },
+      { title: "Progen Emerus", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all vehicle challenges.", seq: [] },
+      { title: "Inflatable Flamingo", cat: "Vehicles", confirmed: false, desc: "Unlock: Destroy 50 cocaine flamingos.", seq: [] },
+      { title: "Vapid Stanier G2 Taxi", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete 5 sports challenges.", seq: [] },
+      { title: "Hauners P-996 Lazer", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all challenges.", seq: [] },
+      { title: "Lapwing Mallard", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete 5 vehicle challenges.", seq: [] },
+      { title: "Brimstone Golfer", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all sports challenges.", seq: [] },
+      { title: "Hauners Rhino Tank", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all survival challenges.", seq: [] },
+      { title: "Maibatsu Sanchez", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete 5 criminal challenges.", seq: [] },
+      { title: "Nagasaki Sea Sparrow", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete 5 exploration challenges.", seq: [] },
+      { title: "Speeder 700 GT", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete 5 combat challenges.", seq: [] },
+      { title: "Truffade Thrax", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all shopping challenges.", seq: [] },
+      { title: "Western Zombie Bobber", cat: "Vehicles", confirmed: false, desc: "Unlock: Complete all criminal challenges.", seq: [] },
+
+      // World & Filters (19)
+      { title: "Cycle Weather", cat: "World", confirmed: true, desc: "Unlock: Finish the main story / reveal the map.", seq: ["DOWN","RIGHT","UP","DOWN","RIGHT","UP","RIGHT"] },
+      { title: "Move Time Forward", cat: "World", confirmed: false, desc: "Unlock: Collect 10 watches.", seq: [] },
+      { title: "Pause Time of Day", cat: "World", confirmed: false, desc: "Unlock: Collect 20 watches.", seq: [] },
+      { title: "Cataclysm Filter", cat: "World", confirmed: true, desc: "Unlock: Discover Martha's Vamos in the Progress menu.", seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","RIGHT","RIGHT"] },
+      { title: "Dollhouse Filter", cat: "World", confirmed: true, desc: "Unlock: Spend 8 hours with your partner.", seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","DOWN","RIGHT"] },
+      { title: "Faded Glory Filter", cat: "World", confirmed: true, desc: "Unlock: Rob 50 stores with your partner.", seq: ["DOWN","DOWN","UP","RIGHT","RIGHT","UP","LEFT","LEFT","LEFT","RIGHT"] },
+      { title: "Golden Hour Filter", cat: "World", confirmed: false, desc: "Unlock: Spend 4 hours holding hands.", seq: [] },
+      { title: "Powdered Sugar Filter", cat: "World", confirmed: false, desc: "Unlock: Scan all space debris with WAiNK.", seq: [] },
+      { title: "Pinhole Filter", cat: "World", confirmed: false, desc: "Unlock: Clear 25 gang operations with your partner.", seq: [] },
+      { title: "Neon Jungle Filter", cat: "World", confirmed: false, desc: "Unlock: Discover all 16 Girlypop Vehicles.", seq: [] },
+      { title: "Yesteryear Filter", cat: "World", confirmed: false, desc: "Unlock: Discover the Ridgway.", seq: [] },
+      { title: "Videotape Filter", cat: "World", confirmed: false, desc: "Unlock: Complete 50 activities with your partner.", seq: [] },
+      { title: "Dark Mirror Filter", cat: "World", confirmed: false, desc: "Unlock: Earn $500,000 from vehicle sales.", seq: [] },
+      { title: "Migraine Filter", cat: "World", confirmed: false, desc: "Unlock: Survive 6 minutes with a 6-star wanted level.", seq: [] },
+      { title: "Bubblegum Filter", cat: "World", confirmed: false, desc: "Unlock: Find all 24 Vice City Flamingos cards.", seq: [] },
+      { title: "Fast Forward Filter", cat: "World", confirmed: false, desc: "Unlock: Complete 50 meditations.", seq: [] },
+      { title: "Fisheye Filter", cat: "World", confirmed: false, desc: "Unlock: Catch 100 fish.", seq: [] },
+      { title: "Pixel Art Filter", cat: "World", confirmed: false, desc: "Unlock: Earn $250,000 selling collectibles.", seq: [] },
+      { title: "Hellscape Filter", cat: "World", confirmed: false, desc: "Unlock: Steal 100 cop vehicles.", seq: [] }
+    ];
+
+    const CAT_CONFIG = [
+      { key: "All", label: () => `All Codes (${cheats.length})` },
+      { key: "Confirmed", label: () => `Confirmed (${cheats.filter(c => c.confirmed).length})` },
+      { key: "Unconfirmed", label: () => `Unconfirmed (${cheats.filter(c => !c.confirmed).length})` },
+      { key: "Combat", label: () => "Combat & Ammo" },
+      { key: "Player", label: () => "Player & Health" },
+      { key: "Vehicles", label: () => "Vehicles" },
+      { key: "World", label: () => "World & Filters" }
     ];
 
     function keyIcon(t) {
@@ -1089,10 +1069,33 @@
       return seq.map(s => s[0] + s.slice(1).toLowerCase()).join(" → ");
     }
 
+    function getConsoleLabel() {
+      return plat === "ps5" ? "PS5 / PS5 Pro" : "Xbox Series X|S";
+    }
+
+    function getHoldButtons() {
+      return plat === "ps5" ? "L1 + R1" : "LB + RB";
+    }
+
     let plat = "ps5";
     let cat = "All";
     const listEl = document.getElementById("cheatList");
     const searchEl = document.getElementById("search");
+    const tabsEl = document.getElementById("catTabs");
+
+    function renderTabs() {
+      tabsEl.innerHTML = CAT_CONFIG.map(t =>
+        `<button class="tab ${cat === t.key ? "active" : ""}" data-cat="${t.key}">${t.label()}</button>`
+      ).join("");
+
+      tabsEl.querySelectorAll(".tab").forEach(b => {
+        b.onclick = () => {
+          cat = b.dataset.cat;
+          renderTabs();
+          render();
+        };
+      });
+    }
 
     function setPlat(p) {
       plat = p;
@@ -1102,7 +1105,9 @@
     }
 
     function copySeq(btn, text) {
-      navigator.clipboard.writeText(text);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(() => {});
+      }
       const old = btn.textContent;
       btn.textContent = "Copied!";
       setTimeout(() => { btn.textContent = old; }, 1000);
@@ -1110,11 +1115,17 @@
 
     function openCouch(i) {
       const c = cheats[i];
-      const prefix = plat === "ps5" ? "Hold L1 + R1, then press: " : "Hold LB + RB, then press: ";
+      const hold = getHoldButtons();
+      const consoleName = getConsoleLabel();
       document.getElementById("cTitle").textContent = c.title;
-      document.getElementById("cPlat").textContent = plat === "ps5" ? "PS5 / PS5 Pro Input" : "Xbox Series X|S Input";
-      document.getElementById("cKeys").innerHTML = c.seq.map(keyIcon).join("");
-      document.getElementById("cPhone").textContent = prefix + formatSeqText(c.seq);
+      document.getElementById("cPlat").textContent = `${consoleName} Input`;
+      if (c.confirmed && c.seq.length) {
+        document.getElementById("cKeys").innerHTML = c.seq.map(keyIcon).join("");
+        document.getElementById("cPhone").textContent = `Hold ${hold}, then press: ${formatSeqText(c.seq)}`;
+      } else {
+        document.getElementById("cKeys").innerHTML = `<span class="pending-seq">Sequence not yet confirmed</span>`;
+        document.getElementById("cPhone").textContent = c.desc;
+      }
       document.getElementById("couchModal").classList.add("open");
     }
 
@@ -1122,33 +1133,51 @@
       document.getElementById("couchModal").classList.remove("open");
     }
 
+    function matchesCategory(c) {
+      if (cat === "All") return true;
+      if (cat === "Confirmed") return c.confirmed;
+      if (cat === "Unconfirmed") return !c.confirmed;
+      return c.cat === cat;
+    }
+
     function render() {
       const q = searchEl.value.trim().toLowerCase();
       const filtered = cheats
         .map((c, idx) => ({ ...c, idx }))
-        .filter(c => (cat === "All" || c.cat === cat) && (c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q)));
+        .filter(c => matchesCategory(c) && (c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q)));
 
       if (filtered.length === 0) {
         listEl.innerHTML = `<div style="padding:20px; text-align:center; color:var(--muted);">No matching cheat codes found.</div>`;
         return;
       }
 
-      const holdHint = plat === "ps5" ? "L1+R1" : "LB+RB";
+      const hold = getHoldButtons();
+      const consoleName = getConsoleLabel();
 
       listEl.innerHTML = filtered.map(c => {
         const badge = c.confirmed
           ? `<span class="tag-confirmed">Confirmed</span>`
           : `<span class="tag-unconfirmed">Unconfirmed</span>`;
-        const seqText = `${holdHint}: ${formatSeqText(c.seq)}`;
+
+        const keysHtml = c.confirmed && c.seq.length
+          ? c.seq.map(keyIcon).join("")
+          : `<span class="pending-seq">D-pad sequence unconfirmed — complete unlock requirement</span>`;
+
+        const seqText = `${consoleName} (${hold}): ${formatSeqText(c.seq)}`;
+        const copyBtnHtml = c.confirmed && c.seq.length
+          ? `<button class="btn-sm" onclick="copySeq(this, '${seqText.replace(/'/g, "\\'")}')">Copy Sequence</button>`
+          : `<button class="btn-sm" onclick="copySeq(this, '${c.title.replace(/'/g, "\\'")} — ${c.desc.replace(/'/g, "\\'")}')">Copy Unlock</button>`;
+
         return `
           <div class="cheat-row">
             <div>
               <div class="cheat-title">${c.title} ${badge}</div>
               <div class="cheat-sub">${c.desc}</div>
+              <div class="hold-tag">${consoleName}: Hold ${hold}</div>
             </div>
-            <div class="keys">${c.seq.map(keyIcon).join("")}</div>
+            <div class="keys">${keysHtml}</div>
             <div class="row-actions">
-              <button class="btn-sm" onclick="copySeq(this, '${seqText}')">Copy Sequence</button>
+              ${copyBtnHtml}
               <button class="btn-sm" onclick="openCouch(${c.idx})" title="Full-screen view">📺</button>
             </div>
           </div>
@@ -1156,16 +1185,8 @@
       }).join("");
     }
 
-    document.querySelectorAll(".tab").forEach(b => {
-      b.onclick = () => {
-        document.querySelector(".tab.active").classList.remove("active");
-        b.classList.add("active");
-        cat = b.dataset.cat;
-        render();
-      };
-    });
-
     searchEl.oninput = render;
+    renderTabs();
     render();
   </script>
 </body>
